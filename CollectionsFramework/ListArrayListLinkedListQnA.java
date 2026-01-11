@@ -318,7 +318,6 @@ public class ListArrayListLinkedListQnA {
         failFastDemo();
         removeIfDemo();
         toArrayDemo();
-
         System.out.println("\nDone.");
     }
 }
