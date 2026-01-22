@@ -1,3 +1,5 @@
+Refer to coding shuttle handbooks for quick notes
+
 # Spring Boot Interview Prep (Index)
 
 This folder is a Spring Boot interview-oriented knowledge base: tricky Q&A, edge cases, and “why it behaves that way”.
