@@ -1,15 +1,24 @@
 # Tech Stack Interview Prep (Index)
 
-This folder covers high-value system design and interview knowledge for three common infrastructure tools:
+This folder covers high-value system design and interview knowledge for common building blocks and infrastructure tools:
 - Kafka for distributed event streaming and durable logs
 - RabbitMQ for message broking and flexible routing
 - Redis for caching, fast state, and lightweight messaging
+- Load balancers and API gateways for traffic entry, routing, and control
+- CDN and edge caching for global delivery and origin protection
+- MongoDB for document-oriented storage
+- Elasticsearch for full-text search and analytics
 
 ## Suggested order
 1. `01-Kafka.md`
 2. `02-RabbitMQ.md`
 3. `03-Redis.md`
 4. `04-URL-Shortener-Case-Study.md`
+5. `05-System-Design-Study-Roadmap.md`
+6. `06-Load-Balancer-And-API-Gateway.md`
+7. `07-CDN-And-Edge-Caching.md`
+8. `08-MongoDB.md`
+9. `09-Elasticsearch.md`
 
 ## How to use these notes
 - Start with the problem each tool solves before memorizing commands or APIs.
@@ -23,6 +32,10 @@ This folder covers high-value system design and interview knowledge for three co
 | Durable event log, replay, analytics, CDC, high-throughput streams | Kafka | Partitioned append-only log with replay, retention, and strong streaming ecosystem |
 | Job queue, work distribution, rich routing, delayed retries, request/reply | RabbitMQ | Exchange-to-queue routing, acknowledgements, dead-lettering, and queue-oriented semantics |
 | Sub-millisecond cache, session store, counters, rate limiting, leaderboards | Redis | In-memory data structures, TTL, atomic operations, and very low latency |
+| Traffic distribution, TLS termination, routing, edge entry point | Load Balancer and API Gateway | Controls how requests enter and move through the system |
+| Faster global content delivery and less origin load | CDN and Edge Caching | Serves cacheable content near users and shields the backend |
+| Flexible JSON-like data with evolving schema | MongoDB | Document database with indexing, replication, and sharding |
+| Full-text search, autocomplete, filters, relevance ranking | Elasticsearch | Search engine built on inverted indexes and distributed querying |
 
 ## Common trap
 - Kafka, RabbitMQ, and Redis are not interchangeable even though all three can move data between services.
@@ -37,7 +50,15 @@ This folder covers high-value system design and interview knowledge for three co
 - If the interviewer says event streaming, replay, CDC, analytics, or immutable log, think Kafka first.
 - If the interviewer says work queue, retries, routing keys, dead-lettering, or task consumers, think RabbitMQ first.
 - If the interviewer says cache, sessions, counters, ranking, rate limiting, or very fast state lookup, think Redis first.
+- If the interviewer says entry point, traffic routing, SSL termination, rate limiting, or public API front door, think load balancer and API gateway.
+- If the interviewer says static assets, global latency, edge delivery, cache hit ratio, or origin protection, think CDN.
+- If the interviewer says flexible schema, content catalog, profile documents, nested objects, or easy JSON-style persistence, think MongoDB.
+- If the interviewer says search box, autocomplete, typo tolerance, relevance, or faceted search, think Elasticsearch.
 
 ## Real-life system case study
 - `04-URL-Shortener-Case-Study.md` explains how Kafka, RabbitMQ, and Redis can fit into one beginner-friendly product design.
 - It also explains when you should start with only one of them instead of using all three from day one.
+
+## What to study next for system design
+- `05-System-Design-Study-Roadmap.md` gives a practical order for preparing for interviews.
+- The new notes add four very common system-design topics that interviewers expect you to recognize quickly.
