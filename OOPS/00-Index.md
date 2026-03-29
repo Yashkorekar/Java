@@ -24,6 +24,10 @@ This folder is a runnable OOP interview-prep track, starting from classes and ob
 - builder, singleton, and factory patterns
 - enums, records, sealed classes, and modern Java OOP features
 
+## Design patterns handbook
+- For the full design-pattern theory track, interview comparisons, and detailed notes for all GoF patterns, see [../DesignPatterns/00-Index.md](../DesignPatterns/00-Index.md).
+- Keep `BuilderSingletonFactoryQnA.java` as the quick runnable companion for the creational basics.
+
 ## How to use these notes
 - Run the files and predict output before reading comments.
 - For every topic, explain both the rule and the interview trap.
