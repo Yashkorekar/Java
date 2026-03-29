@@ -86,7 +86,8 @@ public class ComparableVsComparatorQnA {
 
         Comparator<Employee> bySalaryThenName =
                 Comparator.comparingInt(Employee::getSalary)
-                        .thenComparing(Employee::getName);
+                .thenComparing(Employee::getName)
+                .thenComparingInt(Employee::getId);
         list.sort(bySalaryThenName);
         System.out.println(list);
         // output: sorted by salary asc, then name asc

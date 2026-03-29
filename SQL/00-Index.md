@@ -11,6 +11,9 @@ This folder is a SQL interview-oriented knowledge base: theory, tricky edge case
 6. `06-Indexes-Optimization.md`
 7. `07-Advanced-SQL-Edge-Cases.md`
 8. `08-Interview-Questions-And-Practice.md`
+9. `09-Functions-DataTypes-And-Vendor-Differences.md`
+10. `10-Recursive-CTEs-Advanced-Patterns-And-Case-Studies.md`
+11. `11-Execution-Plans-Statistics-And-Tuning-Workflow.md`
 
 ## Scope
 - SQL language basics and execution order
@@ -21,6 +24,7 @@ This folder is a SQL interview-oriented knowledge base: theory, tricky edge case
 - transactions, locks, isolation levels, anomalies
 - indexes, query plans, performance tuning
 - stored procedures, views, triggers, edge cases
+- vendor differences, advanced functions, recursive patterns, tuning workflow
 - interview-style questions and practice sets
 
 ## Important note
@@ -42,3 +46,5 @@ This folder is a SQL interview-oriented knowledge base: theory, tricky edge case
 - Can you explain dirty read, non-repeatable read, and phantom read?
 - Can you design a schema with PK, FK, unique, and check constraints?
 - Can you solve top-N per group and duplicate-removal problems?
+- Can you explain recursive CTEs, gaps-and-islands, and latest-row-per-group patterns?
+- Can you explain estimated vs actual plan rows and why statistics matter?

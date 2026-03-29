@@ -46,13 +46,13 @@ public class ConditionalsDemo {
         System.out.println("\n--- Common interview patterns ---");
 
         // 1) Guard clause (fail fast)
-        String input = "  hello  ";
-        if (input == null) {
+        String maybeNull = valueFromCaller(null);
+        if (maybeNull == null) {
             System.out.println("input is null");
-            return;
         }
 
         // 2) Validation style
+        String input = valueFromCaller("  hello  ");
         String trimmed = input.trim();
         if (trimmed.isEmpty()) {
             System.out.println("input is empty after trim");
@@ -154,9 +154,8 @@ public class ConditionalsDemo {
         System.out.println("days in month " + month + " = " + days);
 
         // Using 'yield' (when you need a block)
-        String category = "";
         int score = 85;
-        category = switch (score / 10) {
+        String category = switch (score / 10) {
             case 10, 9 -> "excellent";
             case 8 -> {
                 String msg = "great";
@@ -177,7 +176,7 @@ public class ConditionalsDemo {
 
         // Null handling in switch
         try {
-            String s = null;
+            String s = valueFromCaller(null);
             switch (s) {
                 case "A":
                     System.out.println("A");
@@ -192,5 +191,9 @@ public class ConditionalsDemo {
         // Prefer equals with constant on left to avoid NPE
         String maybeNull = null;
         System.out.println("safe equals: " + "x".equals(maybeNull));
+    }
+
+    private static String valueFromCaller(String value) {
+        return value;
     }
 }

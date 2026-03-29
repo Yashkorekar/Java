@@ -11,6 +11,7 @@ public class StringManipulationDemo {
         demoConcatenation();
         demoSubstring();
         demoReverse();
+        demoImmutabilityAndPool();
         printInterviewChecklist();
     }
 
@@ -109,6 +110,28 @@ public class StringManipulationDemo {
         System.out.println("reverse(null) -> " + reverseCharsScratch(null));
     }
 
+    private static void demoImmutabilityAndPool() {
+        System.out.println("\n--- Immutability & string pool ---");
+
+        String original = "java";
+        String upper = original.toUpperCase(Locale.ENGLISH);
+        System.out.println("original = " + original);
+        System.out.println("upper = " + upper);
+        System.out.println("original after toUpperCase = " + original);
+
+        Object pooled1 = "spring";
+        Object pooled2 = "spring";
+        String heapString = new StringBuilder().append("spring").toString();
+        Object heapReference = heapString;
+
+        System.out.println("pooled1 == pooled2 => " + (pooled1 == pooled2));
+        System.out.println("pooled1 == heapReference => " + (pooled1 == heapReference));
+        System.out.println("\"spring\".equals(heapString) => " + "spring".equals(heapString));
+        System.out.println("pooled1 == heapString.intern() => " + (pooled1 == heapString.intern()));
+
+        System.out.println("String literals are pooled; separately built strings can have equal content but different references.");
+    }
+
     // ------------------------
     // “From scratch” implementations
     // ------------------------
@@ -191,6 +214,7 @@ public class StringManipulationDemo {
         // Classic gotchas:
         System.out.println("\nGotchas interviewers love:");
         System.out.println("- String is immutable (every change creates a new String)");
+        System.out.println("- string literals live in the string pool; == may match for pooled literals but never use it for content checks");
         System.out.println("- == compares references, equals() compares contents");
         System.out.println("- null handling (NPE risks)" );
         System.out.println("- substring indices: begin inclusive, end exclusive; validate bounds");
@@ -199,7 +223,7 @@ public class StringManipulationDemo {
 
         // Locale demo (case conversion can be tricky)
         String turkish = "I";
-        System.out.println("\nLocale example: \"I\".toLowerCase(TR) = " + turkish.toLowerCase(new Locale("tr", "TR")));
+        System.out.println("\nLocale example: \"I\".toLowerCase(TR) = " + turkish.toLowerCase(Locale.forLanguageTag("tr-TR")));
         System.out.println("Locale example: \"I\".toLowerCase(EN) = " + turkish.toLowerCase(Locale.ENGLISH));
 
         System.out.println("\nIf you truly need the full list of String methods, open the JDK String javadoc for your Java version.");

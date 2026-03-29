@@ -95,6 +95,12 @@ public class QueueDequePriorityQueueLinkedListQnA {
         System.out.println("maxHeap poll => " + maxHeap.poll()); // 5
         System.out.println("maxHeap poll => " + maxHeap.poll()); // 3
         System.out.println("maxHeap poll => " + maxHeap.poll()); // 1
+
+        try {
+            pq.offer(null);
+        } catch (NullPointerException ex) {
+            System.out.println("PriorityQueue null blocked: NullPointerException");
+        }
     }
 
     static void priorityQueueIterationTrap() {
@@ -123,7 +129,7 @@ public class QueueDequePriorityQueueLinkedListQnA {
             System.out.print(pq.poll() + " ");
         }
         System.out.println();
-        // output: 1 2 3 4
+        // output: 1 3 4 7 8 10 15 20
     }
 
     /*
@@ -181,6 +187,7 @@ public class QueueDequePriorityQueueLinkedListQnA {
 
         // Interview notes:
         // - ArrayDeque does NOT allow null elements.
+        // - PriorityQueue does NOT allow null elements.
         // - LinkedList allows nulls, but is typically slower for stack/queue operations.
     }
 }
