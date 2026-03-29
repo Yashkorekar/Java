@@ -11,6 +11,7 @@ This folder contains runnable Java basics demos. Read it as a progression from s
 6. `MethodsAndPassByValueDemo.java`
 7. `OOPBasicsDemo.java`
 8. `StaticVsInstanceDemo.java`
+9. `LambdaAndFunctionalInterfacesDemo.java`
 
 ## What this folder covers well
 - primitive types, operators, casting, overflow
@@ -19,6 +20,7 @@ This folder contains runnable Java basics demos. Read it as a progression from s
 - method basics, overloading, Java pass-by-value semantics
 - classes, objects, constructors, `this`, encapsulation
 - static vs instance reasoning in real code design
+- lambdas, functional interfaces, method references, and effectively-final capture rules
 
 ## What is covered elsewhere in this repo
 - exceptions: `ExceptionHandling/`

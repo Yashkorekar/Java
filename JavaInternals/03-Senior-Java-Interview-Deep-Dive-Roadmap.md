@@ -4,6 +4,16 @@ If you are going deep into `HashMap` and GC, these are the next topics worth stu
 
 The goal is not to memorize trivia. The goal is to build strong explanations around internals, trade-offs, debugging, and production impact.
 
+## Current deep dives already available in this repo
+
+- `01-HashMap-Internals.md`
+- `02-JVM-Memory-And-Garbage-Collection.md`
+- `04-ConcurrentHashMap-Internals.md`
+- `05-ArrayList-Internals.md`
+- `06-LinkedList-Internals.md`
+
+Use this roadmap to decide what to add after those.
+
 ## 1. Top topics to study deeply next
 
 | Priority | Topic | Why senior interviewers care |

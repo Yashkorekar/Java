@@ -12,6 +12,7 @@ This folder contains runnable Q&A-style demos for the most common collections an
 7. `IteratorsEnhancedForForEachQnA.java`
 8. `CollectionsUtilityQnA.java`
 9. `ConcurrentCollectionsQnA.java`
+10. `StreamsAndCollectorsQnA.java`
 
 ## What this folder covers well
 - List, Set, Map, Queue, Deque, PriorityQueue fundamentals
@@ -22,9 +23,10 @@ This folder contains runnable Q&A-style demos for the most common collections an
 - core `Collections` utility methods and immutable/view traps
 - `LinkedHashMap` ordering and LRU-style cache pattern
 - concurrent collections that show up in interviews
+- Stream API basics, laziness, collectors, and common stream misuse traps
 
 ## Still useful but outside this folder
-- Stream API and collectors
+- stream internals like spliterators and parallel execution internals
 - deeper collection internals and JVM implementation details
 - advanced concurrency patterns beyond collection choice
 
