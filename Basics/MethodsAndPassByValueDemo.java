@@ -2,6 +2,15 @@ package Basics;
 
 public class MethodsAndPassByValueDemo {
 
+    /*
+     * Theory:
+     * - A method signature is primarily its name plus parameter types.
+     * - Overloading is compile-time selection based on the argument list.
+     * - Java always passes arguments by value, even when the value is an object reference.
+     * - Varargs are compiled as arrays and must appear last in the parameter list.
+     * - Small, explicit method names beat clever overload combinations in real code.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== Methods: signatures, overloading, pass-by-value ===");
 
@@ -9,8 +18,10 @@ public class MethodsAndPassByValueDemo {
         overloadingDemo();
         passByValueWithPrimitive();
         passByValueWithObjectReference();
+        swapTrapDemo();
         varargsDemo();
         interviewTakeaways();
+        interviewTrapQuestions();
     }
 
     private static void methodShapes() {
@@ -55,11 +66,23 @@ public class MethodsAndPassByValueDemo {
         System.out.println("Java is still pass-by-value here: the copied value is the object reference.");
     }
 
+    private static void swapTrapDemo() {
+        System.out.println("\n--- Swap trap ---");
+
+        int left = 10;
+        int right = 20;
+        System.out.println("before swap(left, right) => left=" + left + ", right=" + right);
+        swap(left, right);
+        System.out.println("after swap(left, right) => left=" + left + ", right=" + right);
+    }
+
     private static void varargsDemo() {
         System.out.println("\n--- Varargs ---");
 
         System.out.println("sumAll() = " + sumAll());
         System.out.println("sumAll(1, 2, 3, 4) = " + sumAll(1, 2, 3, 4));
+        int[] values = { 5, 6, 7 };
+        System.out.println("sumAll(array) = " + sumAll(values));
         System.out.println("Varargs are treated like an array inside the method.");
     }
 
@@ -69,6 +92,18 @@ public class MethodsAndPassByValueDemo {
         System.out.println("- For objects, the copied value is the reference, not the object itself.");
         System.out.println("- Overloading is compile-time polymorphism.");
         System.out.println("- Prefer clear method names and small method responsibilities over clever signatures.");
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Does Java pass objects by reference?");
+        System.out.println("A: No. Java passes the reference value by value.");
+        System.out.println("Q: Why does a swap method not swap caller variables?");
+        System.out.println("A: The method only swaps its local copies of the argument values.");
+        System.out.println("Q: Can you overload a method by changing only the return type?");
+        System.out.println("A: No. Return type alone is not enough for overloading.");
+        System.out.println("Q: Is varargs something special at runtime?");
+        System.out.println("A: Inside the method, it is just an array.");
     }
 
     static void greet(String name) {
@@ -108,6 +143,13 @@ public class MethodsAndPassByValueDemo {
     static void reassignBox(NameBox box) {
         box = new NameBox("Temporary");
         System.out.println("inside reassignBox => " + box);
+    }
+
+    static void swap(int left, int right) {
+        int temp = left;
+        left = right;
+        right = temp;
+        System.out.println("inside swap => left=" + left + ", right=" + right);
     }
 
     static int sumAll(int... numbers) {

@@ -2,6 +2,15 @@ package Basics;
 
 public class DataType {
 
+	/*
+	 * Theory:
+	 * - Primitive variables store raw values; reference variables store object references.
+	 * - Integer types are fixed-width signed values; floating-point types follow IEEE 754 behavior.
+	 * - Smaller integer types are promoted to int in most arithmetic expressions.
+	 * - Widening conversion is implicit; narrowing conversion is explicit and can lose information.
+	 * - char is a UTF-16 code unit, so one char is not always one full Unicode character.
+	 */
+
 	public static void main(String[] args) {
 		// 1) Print statements
 		System.out.println("=== Print statements ===");
@@ -85,6 +94,7 @@ public class DataType {
 		int max = Integer.MAX_VALUE;
 		System.out.println("Integer.MAX_VALUE = " + max);
 		System.out.println("MAX_VALUE + 1 = " + (max + 1));
+		interviewTrapQuestions();
 
 		// 6) Mini exercises (quick interview-style checks)
 		System.out.println("\n=== Mini checks ===");
@@ -93,5 +103,24 @@ public class DataType {
 		System.out.println("3) (int) 'z' = " + (int) 'z');
 		System.out.println("4) 'a' + 1 = " + ('a' + 1));
 		System.out.println("5) \"a\" + 1 = " + ("a" + 1));
+		try {
+			int crash = 1 / 0;
+			System.out.println("6) 1 / 0 = " + crash);
+		} catch (ArithmeticException ex) {
+			System.out.println("6) 1 / 0 throws " + ex.getClass().getSimpleName());
+		}
+		System.out.println("7) 1.0 / 0.0 = " + (1.0 / 0.0));
+	}
+
+	private static void interviewTrapQuestions() {
+		System.out.println("\n=== Trap questions interviewers ask ===");
+		System.out.println("Q: Why is 'a' + 1 equal to 98 but \"a\" + 1 equal to a1?");
+		System.out.println("A: char participates in numeric promotion, while String triggers concatenation.");
+		System.out.println("Q: Does int overflow throw an exception?");
+		System.out.println("A: No. Integer overflow wraps silently in Java.");
+		System.out.println("Q: Is 7 / 2 the same as 7 / 2.0?");
+		System.out.println("A: No. int / int truncates first; a floating-point operand keeps the fraction.");
+		System.out.println("Q: Is Java char just an ASCII byte?");
+		System.out.println("A: No. It is 16-bit and represents a UTF-16 code unit.");
 	}
 }

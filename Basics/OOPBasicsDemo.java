@@ -2,14 +2,25 @@ package Basics;
 
 public class OOPBasicsDemo {
 
+    /*
+     * Theory:
+     * - A class is a blueprint; an object is one runtime instance of that blueprint.
+     * - Constructors establish valid state when objects are created.
+     * - Instance fields belong to each object; static fields belong to the class.
+     * - Encapsulation means keeping invariants inside methods instead of exposing raw state.
+     * - Field defaults exist; local variable defaults do not.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== OOP basics: classes, objects, constructors, this ===");
 
         constructorAndObjectStateDemo();
         encapsulationDemo();
         defaultFieldValuesDemo();
+        referenceAliasingDemo();
         instanceVsClassStateDemo();
         interviewTakeaways();
+        interviewTrapQuestions();
     }
 
     private static void constructorAndObjectStateDemo() {
@@ -47,6 +58,18 @@ public class OOPBasicsDemo {
         System.out.println("local variables have no default value; they must be initialized before use.");
     }
 
+    private static void referenceAliasingDemo() {
+        System.out.println("\n--- Reference aliasing ---");
+
+        Student original = new Student("Isha", 81);
+        Student alias = original;
+
+        alias.setMarks(95);
+
+        System.out.println("original after alias mutation = " + original.summary());
+        System.out.println("alias == original => " + (alias == original));
+    }
+
     private static void instanceVsClassStateDemo() {
         System.out.println("\n--- Instance vs class state ---");
 
@@ -66,6 +89,18 @@ public class OOPBasicsDemo {
         System.out.println("- Constructors initialize valid state.");
         System.out.println("- `this` refers to the current object and helps with constructor chaining and shadowed names.");
         System.out.println("- Encapsulation means protecting invariants instead of exposing fields freely.");
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Does alias = original copy the whole object?");
+        System.out.println("A: No. It copies the reference, so both names point to the same object.");
+        System.out.println("Q: Do local variables get default values like fields?");
+        System.out.println("A: No. Local variables must be initialized before use.");
+        System.out.println("Q: Are constructors inherited?");
+        System.out.println("A: No. Constructors belong to the class that declares them.");
+        System.out.println("Q: Can a static method use this?");
+        System.out.println("A: No. this exists only for an object instance.");
     }
 
     static final class DefaultsBox {

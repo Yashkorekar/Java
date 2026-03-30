@@ -13,6 +13,17 @@ This folder contains runnable Java basics demos. Read it as a progression from s
 8. `StaticVsInstanceDemo.java`
 9. `LambdaAndFunctionalInterfacesDemo.java`
 
+## What each demo adds
+- `DataType.java`: primitives vs references, promotions, casting, overflow, and division traps
+- `ConditionalsDemo.java`: `if/else`, ternary, classic `switch`, switch expressions, and null/assignment gotchas
+- `LoopsDemo.java`: choosing the right loop form, loop control, iterator-safe removal, and off-by-one traps
+- `ArraysDemo.java`: fixed-size arrays, traversal, reverse patterns, `Arrays` APIs, and covariance pitfalls
+- `StringManipulationDemo.java`: immutability, pooling, substring rules, Unicode basics, and regex-based `split` traps
+- `MethodsAndPassByValueDemo.java`: signatures, overloading, varargs, object mutation, and the pass-by-value reality
+- `OOPBasicsDemo.java`: constructors, encapsulation, aliasing, `this`, field defaults, and class vs object state
+- `StaticVsInstanceDemo.java`: when static is appropriate, why static mutable state hurts design, and dispatch quirks
+- `LambdaAndFunctionalInterfacesDemo.java`: lambda syntax, functional interfaces, method references, capture rules, and scope differences
+
 ## What this folder covers well
 - primitive types, operators, casting, overflow
 - conditionals, switch, loops, guard clauses
@@ -29,5 +40,6 @@ This folder contains runnable Java basics demos. Read it as a progression from s
 
 ## How to use these notes
 - Run the demos, do not only read them.
-- For each file, be able to explain at least 2-3 interview traps from memory.
-- When a demo prints a surprising result, pause and explain why before moving on.
+- For each file, predict the output of the trap section before you execute it.
+- When a demo prints a surprising result, explain the language rule behind it in one sentence.
+- If you catch yourself saying "Java passes objects by reference", correct it to "Java passes the reference value by value."

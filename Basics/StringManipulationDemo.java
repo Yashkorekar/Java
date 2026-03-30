@@ -1,9 +1,19 @@
 package Basics;
 
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.StringJoiner;
 
 public class StringManipulationDemo {
+
+    /*
+     * Theory:
+     * - String is immutable, so every apparent modification creates a new String object.
+     * - String literals are pooled, which affects reference equality but not content equality.
+     * - substring uses begin-inclusive and end-exclusive indices.
+     * - char and charAt operate on UTF-16 code units, not always full Unicode characters.
+     * - StringBuilder is the standard mutable companion for repeated edits.
+     */
 
     public static void main(String[] args) {
         System.out.println("=== String manipulation: concat, substring, reverse ===");
@@ -11,8 +21,10 @@ public class StringManipulationDemo {
         demoConcatenation();
         demoSubstring();
         demoReverse();
+        regexSplitTrapDemo();
         demoImmutabilityAndPool();
         printInterviewChecklist();
+        interviewTrapQuestions();
     }
 
     private static void demoConcatenation() {
@@ -108,6 +120,15 @@ public class StringManipulationDemo {
 
         // Another common interview point: null safety
         System.out.println("reverse(null) -> " + reverseCharsScratch(null));
+    }
+
+    private static void regexSplitTrapDemo() {
+        System.out.println("\n--- split regex trap ---");
+
+        String dotted = "a.b";
+        String anyCharacterRegex = ".";
+        System.out.println("split(\".\") => " + Arrays.toString(dotted.split(anyCharacterRegex)));
+        System.out.println("split(\"\\\\.\") => " + Arrays.toString(dotted.split("\\.")));
     }
 
     private static void demoImmutabilityAndPool() {
@@ -227,5 +248,17 @@ public class StringManipulationDemo {
         System.out.println("Locale example: \"I\".toLowerCase(EN) = " + turkish.toLowerCase(Locale.ENGLISH));
 
         System.out.println("\nIf you truly need the full list of String methods, open the JDK String javadoc for your Java version.");
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Should you use == to compare String contents?");
+        System.out.println("A: No. == compares references; equals() compares characters.");
+        System.out.println("Q: Why does split(\".\") not behave like splitting on a dot character?");
+        System.out.println("A: split uses regex and . means any character, so you must escape it as \"\\\\.\".");
+        System.out.println("Q: Does String.valueOf(null) throw NullPointerException?");
+        System.out.println("A: No. It returns the literal string \"null\".");
+        System.out.println("Q: Is one char always one user-visible character?");
+        System.out.println("A: No. Some Unicode characters need surrogate pairs, so code points matter.");
     }
 }

@@ -10,6 +10,15 @@ import java.util.function.Supplier;
 
 public class LambdaAndFunctionalInterfacesDemo {
 
+    /*
+     * Theory:
+     * - A lambda is an implementation for a target functional interface.
+     * - A functional interface may still have default and static methods; it just needs one abstract method.
+     * - Parameter and return types are usually inferred from the target type.
+     * - Captured local variables must be final or effectively final.
+     * - Method references are shorthand when an existing method already matches the target signature.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== Lambdas and functional interfaces ===");
 
@@ -19,6 +28,7 @@ public class LambdaAndFunctionalInterfacesDemo {
         effectivelyFinalDemo();
         comparatorWithLambdaDemo();
         interviewTakeaways();
+        interviewTrapQuestions();
     }
 
     private static void lambdaSyntaxDemo() {
@@ -28,6 +38,7 @@ public class LambdaAndFunctionalInterfacesDemo {
         GreetingFormatter loudFormatter = name -> ("Hello, " + name).toUpperCase();
 
         System.out.println(formatter.format("Asha"));
+        System.out.println(formatter.excited("Mina"));
         System.out.println(loudFormatter.format("Ravi"));
     }
 
@@ -79,8 +90,24 @@ public class LambdaAndFunctionalInterfacesDemo {
         System.out.println("- Method references are syntax sugar when an existing method already matches the target shape.");
     }
 
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Does adding a default method stop an interface from being functional?");
+        System.out.println("A: No. Only abstract methods count toward the functional-interface rule.");
+        System.out.println("Q: Is a lambda the same as an anonymous inner class?");
+        System.out.println("A: No. Their scoping rules differ, especially around this and shadowing.");
+        System.out.println("Q: Can a lambda mutate a captured local variable?");
+        System.out.println("A: No. Captured locals must be final or effectively final.");
+        System.out.println("Q: Does @FunctionalInterface create lambda behavior?");
+        System.out.println("A: No. It only asks the compiler to validate the interface shape.");
+    }
+
     @FunctionalInterface
     interface GreetingFormatter {
         String format(String name);
+
+        default String excited(String name) {
+            return format(name) + "!";
+        }
     }
 }

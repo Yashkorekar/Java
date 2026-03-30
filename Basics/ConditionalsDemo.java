@@ -2,6 +2,15 @@ package Basics;
 
 public class ConditionalsDemo {
 
+    /*
+     * Theory:
+     * - if/else checks conditions from top to bottom and runs the first matching branch.
+     * - The ternary operator is an expression, so it produces a value.
+     * - switch is best for discrete equality checks, not arbitrary ranges.
+     * - Classic switch can fall through; switch expressions use -> and do not fall through.
+     * - A switch expression should be exhaustive so every input path yields a result.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== Conditionals: if-else, switch-case ===");
 
@@ -10,6 +19,7 @@ public class ConditionalsDemo {
         switchClassic();
         switchExpressionModern();
         interviewGotchas();
+        interviewTrapQuestions();
     }
 
     private static void ifElseBasics() {
@@ -174,6 +184,12 @@ public class ConditionalsDemo {
         System.out.println("switch classic requires break to avoid fall-through");
         System.out.println("switch on String uses equals() semantics (case-sensitive)");
 
+        boolean approved;
+        if (approved = true) {
+            System.out.println("assignment inside if compiles for booleans and is usually a bug");
+        }
+        System.out.println("approved after assignment-in-condition = " + approved);
+
         // Null handling in switch
         try {
             String s = valueFromCaller(null);
@@ -191,6 +207,18 @@ public class ConditionalsDemo {
         // Prefer equals with constant on left to avoid NPE
         String maybeNull = null;
         System.out.println("safe equals: " + "x".equals(maybeNull));
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Does switch on null go to default?");
+        System.out.println("A: No. It throws NullPointerException before matching any case.");
+        System.out.println("Q: Can switch use boolean or long in basic Java syntax?");
+        System.out.println("A: No. Common switch types are byte, short, char, int, enum, String, and some wrappers.");
+        System.out.println("Q: Which if does an else bind to?");
+        System.out.println("A: The nearest unmatched if.");
+        System.out.println("Q: Does assignment inside an if condition compile?");
+        System.out.println("A: It does for boolean assignments, which is why it is a classic bug source.");
     }
 
     private static String valueFromCaller(String value) {

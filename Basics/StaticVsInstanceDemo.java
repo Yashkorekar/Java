@@ -5,6 +5,15 @@ import java.math.RoundingMode;
 
 public class StaticVsInstanceDemo {
 
+    /*
+     * Theory:
+     * - static members belong to the class, not to any one object.
+     * - instance members need an object because they work with per-object state.
+     * - static is a good fit for constants and stateless utility behavior.
+     * - static mutable state becomes global shared state for that class loader.
+     * - instance-based design keeps state explicit, isolated, and easier to test.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== WRONG: static mutable state (global) ===");
         wrongStaticExample();
@@ -12,10 +21,9 @@ public class StaticVsInstanceDemo {
         System.out.println("\n=== RIGHT: instance-based (per configuration) ===");
         rightInstanceExample();
 
-        System.out.println("\n=== Interview takeaway ===");
-        System.out.println("- static is fine for constants and stateless utilities.");
-        System.out.println("- static mutable state is shared across the whole JVM: tests interfere, multi-tenant bugs, concurrency risks.");
-        System.out.println("- prefer instance + dependency injection when behavior depends on config/state or needs isolation.");
+        nullReferenceStaticDispatchTrap();
+        interviewTakeaways();
+        interviewTrapQuestions();
     }
 
     private static void wrongStaticExample() {
@@ -52,6 +60,59 @@ public class StaticVsInstanceDemo {
         System.out.println("Tenant A again (still 10% off): " + tenantAAgain);
 
         // Bonus: this is naturally thread-safe because the state is immutable (final) per instance.
+    }
+
+    private static void nullReferenceStaticDispatchTrap() {
+        System.out.println("\n=== Trap: calling static through a null reference ===");
+
+        CallTarget target = null;
+        System.out.println("callStaticThroughReference(null) => " + callStaticThroughReference(target));
+
+        try {
+            System.out.println("callInstanceThroughReference(null) => " + callInstanceThroughReference(target));
+        } catch (NullPointerException ex) {
+            System.out.println("callInstanceThroughReference(null) throws " + ex.getClass().getSimpleName());
+        }
+
+        System.out.println("Legal syntax is not good style here: prefer ClassName.staticMethod().");
+    }
+
+    @SuppressWarnings("static-access")
+    private static String callStaticThroughReference(Object target) {
+        return ((CallTarget) target).describeType();
+    }
+
+    private static String callInstanceThroughReference(Object target) {
+        return ((CallTarget) target).describeInstance();
+    }
+
+    private static void interviewTakeaways() {
+        System.out.println("\n=== Interview takeaway ===");
+        System.out.println("- static is fine for constants and stateless utilities.");
+        System.out.println("- static mutable state is shared across the whole JVM: tests interfere, multi-tenant bugs, concurrency risks.");
+        System.out.println("- prefer instance + dependency injection when behavior depends on config/state or needs isolation.");
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n=== Trap questions interviewers ask ===");
+        System.out.println("Q: Can a static method access an instance field directly?");
+        System.out.println("A: No. It needs an object reference first.");
+        System.out.println("Q: Are static methods overridden polymorphically?");
+        System.out.println("A: No. They are hidden, not overridden.");
+        System.out.println("Q: Is static mutable state effectively global state?");
+        System.out.println("A: Yes. It is shared for that class and can leak across callers, tests, and threads.");
+        System.out.println("Q: Does calling a static method through a null reference always throw NullPointerException?");
+        System.out.println("A: No. Static dispatch uses the reference type, not an instance dereference.");
+    }
+
+    static final class CallTarget {
+        static String describeType() {
+            return "static dispatch is resolved from the declared type";
+        }
+
+        String describeInstance() {
+            return "instance dispatch needs a real object";
+        }
     }
 
     /**

@@ -4,6 +4,15 @@ import java.util.Arrays;
 
 public class ArraysDemo {
 
+    /*
+     * Theory:
+     * - Arrays are objects with fixed length once created.
+     * - Primitive arrays store primitive values; object arrays store references.
+     * - length is a field on the array object, not a method.
+     * - Multi-dimensional arrays in Java are really arrays of arrays, so jagged shapes are valid.
+     * - Reference arrays are covariant, which is convenient but can fail at runtime.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== Arrays: declaration, traversal, basic ops ===");
 
@@ -11,7 +20,9 @@ public class ArraysDemo {
         traversalExamples();
         basicOperations();
         reverseExamples();
+        referenceArrayCovarianceTrap();
         arraysUtilityChecklist();
+        interviewTrapQuestions();
     }
 
     private static void declarationAndInitialization() {
@@ -124,6 +135,20 @@ public class ArraysDemo {
         System.out.println("empty reverse=" + Arrays.toString(zero));
     }
 
+    private static void referenceArrayCovarianceTrap() {
+        System.out.println("\n--- Reference array covariance trap ---");
+
+        Object[] values = new String[2];
+        values[0] = "safe";
+        System.out.println("after safe store = " + Arrays.toString(values));
+
+        try {
+            values[1] = 123;
+        } catch (ArrayStoreException ex) {
+            System.out.println("Object[] pointing to String[] rejects Integer at runtime: " + ex.getClass().getSimpleName());
+        }
+    }
+
     // ------------------------
     // From-scratch implementations
     // ------------------------
@@ -222,5 +247,17 @@ public class ArraysDemo {
         System.out.println("- Arrays.asList has fixed size view (no add/remove), backed by original array");
 
         System.out.println("\nIf you need the full API surface, check the Arrays javadoc for your JDK version.");
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Is arr.length a method call?");
+        System.out.println("A: No. It is a field on the array object.");
+        System.out.println("Q: Does Arrays.asList(new int[] {1, 2}) create a list with two integers?");
+        System.out.println("A: No. For primitive arrays it creates a single-element List<int[]>.");
+        System.out.println("Q: Should you use == to compare array contents?");
+        System.out.println("A: No. == compares references; use Arrays.equals or Arrays.deepEquals.");
+        System.out.println("Q: Can Java arrays change size after creation?");
+        System.out.println("A: No. You need a new array or a resizable collection like ArrayList.");
     }
 }

@@ -6,6 +6,15 @@ import java.util.List;
 
 public class LoopsDemo {
 
+    /*
+     * Theory:
+     * - Use for when the iteration count or index progression is explicit.
+     * - Use while when you stop based on a changing condition or sentinel.
+     * - Use do-while when the body must execute at least once.
+     * - Use enhanced-for for traversal when you do not need indices or in-place replacement.
+     * - break exits a loop early; continue skips the rest of the current iteration.
+     */
+
     public static void main(String[] args) {
         System.out.println("=== Loops: for, while, do-while, enhanced for ===");
 
@@ -14,6 +23,7 @@ public class LoopsDemo {
         doWhileBasics();
         enhancedForBasics();
         commonInterviewGotchas();
+        interviewTrapQuestions();
     }
 
     private static void forLoopBasics() {
@@ -183,5 +193,17 @@ public class LoopsDemo {
         System.out.println("after removing odds with iterator: " + list);
 
         System.out.println("\n5) Prefer enhanced-for for read-only traversal; prefer index loop when you need indices or in-place edits.");
+    }
+
+    private static void interviewTrapQuestions() {
+        System.out.println("\n--- Trap questions interviewers ask ---");
+        System.out.println("Q: Does changing the loop variable in enhanced-for modify the array?");
+        System.out.println("A: No. The loop variable is a copy of each element value.");
+        System.out.println("Q: Which loop guarantees at least one execution?");
+        System.out.println("A: do-while.");
+        System.out.println("Q: Does break leave every nested loop?");
+        System.out.println("A: No. It leaves only the nearest loop unless you use a label.");
+        System.out.println("Q: Can you safely remove from an ArrayList inside enhanced-for?");
+        System.out.println("A: Not directly. Use Iterator.remove() or another safe pattern.");
     }
 }
