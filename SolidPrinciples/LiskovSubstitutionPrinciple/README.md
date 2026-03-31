@@ -3,6 +3,8 @@
 ## 1. Plain English explanation
 - LSP means a child class should be usable wherever its parent type is expected without breaking the program.
 - If a parent type promises some behavior, child types should honor that expectation.
+- It applies to inheritance in such a way that the derived classes must be completely substituable for their base classes.
+- In other words, if class A is a subtype of class B, then we should be able to replace B with A without interrupting the behaviour of the program
 
 ## 2. What this principle is trying to avoid
 - Inheritance that looks correct in code but breaks behavior in real use.
