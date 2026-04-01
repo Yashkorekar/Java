@@ -8,16 +8,21 @@ This folder is a runnable OOP interview-prep track, starting from classes and ob
 3. `ConstructorOverloadingAndChainingQnA.java`
 4. `ThisKeywordUsageQnA.java`
 5. `GettersSettersQnA.java`
-6. `MethodOverloadingVsOverridingQnA.java`
-7. `OopsQnA.java`
-8. `OopsInterviewTricksQnA.java`
-9. `InterfacesAbstractClassesAndCompositionQnA.java`
-10. `BuilderSingletonFactoryQnA.java`
-11. `EnumsRecordsAndSealedClassesQnA.java`
+6. `EncapsulationQnA.java`
+7. `InheritanceQnA.java`
+8. `PolymorphismQnA.java`
+9. `AbstractionQnA.java`
+10. `MethodOverloadingVsOverridingQnA.java`
+11. `OopsQnA.java`
+12. `OopsInterviewTricksQnA.java`
+13. `InterfacesAbstractClassesAndCompositionQnA.java`
+14. `BuilderSingletonFactoryQnA.java`
+15. `EnumsRecordsAndSealedClassesQnA.java`
 
 ## What this folder covers well
 - classes, objects, state, behavior, references, aliasing
 - constructors, chaining, validation, `this`, `super`
+- the 4 core OOPS pillars with focused beginner demos: encapsulation, inheritance, polymorphism, abstraction
 - encapsulation, getters/setters, defensive copying
 - overloading, overriding, polymorphism, equality, object contract
 - interfaces vs abstract classes, default methods, composition vs inheritance
