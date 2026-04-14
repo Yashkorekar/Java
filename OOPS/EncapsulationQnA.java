@@ -15,6 +15,7 @@ public class EncapsulationQnA {
      * =============================
      * Encapsulation means:
      * - keep data and behavior together inside a class
+     * - hide internal state of object and exposing behaviour through methods
      * - protect the internal state from direct uncontrolled access
      * - expose safe operations through methods
      *
