@@ -64,3 +64,8 @@ ListNode middle(ListNode head) {
 
 ## 8. Interview answer in one line
 - Linked list problems are usually solved by careful pointer movement, especially reverse, dummy node, and slow-fast pointer patterns.
+
+## More interview practice
+- [LeetCode 206 - Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+- [LeetCode 19 - Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+- [LeetCode 138 - Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)

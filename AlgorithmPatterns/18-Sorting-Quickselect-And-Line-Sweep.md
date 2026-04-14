@@ -35,3 +35,8 @@
 
 ## 7. Interview answer in one line
 - Sorting often unlocks the real pattern, quickselect handles kth order statistics, and line sweep handles event-driven interval or coordinate problems.
+
+## More interview practice
+- [LeetCode 912 - Sort an Array](https://leetcode.com/problems/sort-an-array/)
+- [LeetCode 973 - K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+- [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)

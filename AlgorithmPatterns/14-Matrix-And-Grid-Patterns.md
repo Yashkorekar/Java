@@ -44,3 +44,8 @@ for (int[] direction : directions) {
 
 ## 7. Interview answer in one line
 - Matrix and grid problems usually reduce to traversal with direction arrays, simulation, or grid-as-graph BFS or DFS.
+
+## More interview practice
+- [LeetCode 54 - Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+- [LeetCode 48 - Rotate Image](https://leetcode.com/problems/rotate-image/)
+- [LeetCode 73 - Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)

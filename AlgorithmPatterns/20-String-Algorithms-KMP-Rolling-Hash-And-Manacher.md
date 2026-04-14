@@ -42,3 +42,8 @@
 
 ## 9. Interview answer in one line
 - Advanced string algorithms matter when simple scanning becomes too slow and the structure of prefixes, substrings, or palindromes must be exploited directly.
+
+## More interview practice
+- [LeetCode 214 - Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
+- [LeetCode 647 - Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+- [LeetCode 1316 - Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)

@@ -78,3 +78,8 @@ int climbStairs(int n) {
 
 ## 10. Interview answer in one line
 - Dynamic programming solves repeated-state optimization or counting problems by storing answers to smaller states and building from them.
+
+## More interview practice
+- [LeetCode 139 - Word Break](https://leetcode.com/problems/word-break/)
+- [LeetCode 91 - Decode Ways](https://leetcode.com/problems/decode-ways/)
+- [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)

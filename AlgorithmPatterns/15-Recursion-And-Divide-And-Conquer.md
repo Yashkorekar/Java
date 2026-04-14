@@ -44,3 +44,8 @@ void mergeSort(int[] nums, int left, int right) {
 
 ## 7. Interview answer in one line
 - Use recursion or divide-and-conquer when the problem naturally breaks into smaller similar parts and the combined result is manageable.
+
+## More interview practice
+- [LeetCode 50 - Pow(x, n)](https://leetcode.com/problems/powx-n/)
+- [LeetCode 241 - Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
+- [LeetCode 912 - Sort an Array](https://leetcode.com/problems/sort-an-array/)

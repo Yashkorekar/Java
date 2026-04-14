@@ -110,3 +110,8 @@ List<Integer> topoSort(int n, List<List<Integer>> graph, int[] indegree) {
 
 ## 12. Interview answer in one line
 - Use BFS for level-wise or shortest-path-in-unweighted problems, DFS for deep traversal and component or cycle exploration, and topological sort for dependency ordering.
+
+## More interview practice
+- [LeetCode 133 - Clone Graph](https://leetcode.com/problems/clone-graph/)
+- [LeetCode 994 - Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+- [LeetCode 417 - Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)

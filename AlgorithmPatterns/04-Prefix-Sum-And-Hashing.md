@@ -81,3 +81,8 @@ int countSubarraysWithSum(int[] nums, int target) {
 
 ## 11. Interview answer in one line
 - Prefix sum and hashing are used when a subarray condition can be rewritten using cumulative state and fast lookup of earlier states.
+
+## More interview practice
+- [LeetCode 930 - Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/)
+- [LeetCode 523 - Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+- [LeetCode 1248 - Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/)

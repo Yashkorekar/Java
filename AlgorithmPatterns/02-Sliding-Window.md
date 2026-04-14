@@ -89,3 +89,8 @@ int longestAtMostKDistinct(String s, int k) {
 
 ## 10. Interview answer in one line
 - Sliding window is for contiguous range problems where the answer can be updated by expanding right and shrinking left.
+
+## More interview practice
+- [LeetCode 567 - Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+- [LeetCode 438 - Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+- [LeetCode 1004 - Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)

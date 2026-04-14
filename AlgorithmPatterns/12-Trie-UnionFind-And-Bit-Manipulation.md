@@ -112,3 +112,11 @@ class DSU {
 
 ## 6. Interview answer in one line
 - Trie is for prefix-based string lookup, Union Find is for dynamic connectivity, and bit manipulation is for compact state and XOR-style tricks.
+
+## More interview practice
+- Trie: [LeetCode 1268 - Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
+- Trie: [LeetCode 648 - Replace Words](https://leetcode.com/problems/replace-words/)
+- Union Find: [LeetCode 1319 - Number of Operations to Make Network Connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
+- Union Find: [LeetCode 1202 - Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)
+- Bit manipulation: [LeetCode 260 - Single Number III](https://leetcode.com/problems/single-number-iii/)
+- Bit manipulation: [LeetCode 190 - Reverse Bits](https://leetcode.com/problems/reverse-bits/)

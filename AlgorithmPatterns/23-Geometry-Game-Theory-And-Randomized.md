@@ -42,3 +42,8 @@
 
 ## 6. Interview answer in one line
 - Geometry, game theory, and randomized problems are niche but real, and they usually depend on spotting a specialized model rather than forcing a standard mainstream pattern.
+
+## More interview practice
+- [LeetCode 223 - Rectangle Area](https://leetcode.com/problems/rectangle-area/)
+- [LeetCode 1510 - Stone Game IV](https://leetcode.com/problems/stone-game-iv/)
+- [LeetCode 470 - Implement Rand10() Using Rand7()](https://leetcode.com/problems/implement-rand10-using-rand7/)

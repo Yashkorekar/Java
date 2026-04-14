@@ -90,3 +90,8 @@ int removeDuplicates(int[] nums) {
 
 ## 10. Interview answer in one line
 - Two pointers is useful when two moving indices can cut the search space faster than checking every pair or range.
+
+## More interview practice
+- [LeetCode 11 - Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+- [LeetCode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [LeetCode 680 - Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)

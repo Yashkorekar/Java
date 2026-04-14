@@ -94,3 +94,8 @@ List<List<Integer>> levelOrder(TreeNode root) {
 
 ## 11. Interview answer in one line
 - Tree problems are usually solved by deciding what each recursive call returns and how to combine left and right subtree results.
+
+## More interview practice
+- [LeetCode 124 - Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+- [LeetCode 297 - Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [LeetCode 105 - Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)

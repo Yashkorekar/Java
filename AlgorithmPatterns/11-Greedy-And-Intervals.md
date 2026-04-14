@@ -62,3 +62,8 @@ int[][] merge(int[][] intervals) {
 
 ## 9. Interview answer in one line
 - Greedy works when a locally best decision can be proven to preserve a globally optimal answer, and interval problems often become greedy after sorting.
+
+## More interview practice
+- [LeetCode 134 - Gas Station](https://leetcode.com/problems/gas-station/)
+- [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+- [LeetCode 763 - Partition Labels](https://leetcode.com/problems/partition-labels/)

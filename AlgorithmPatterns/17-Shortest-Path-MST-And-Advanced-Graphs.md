@@ -43,3 +43,8 @@ PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1])
 
 ## 9. Interview answer in one line
 - Advanced graph patterns begin when graphs become weighted, cost-sensitive, or require global connectivity optimization like shortest path or MST.
+
+## More interview practice
+- [LeetCode 1514 - Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
+- [LeetCode 1631 - Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+- [LeetCode 778 - Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)

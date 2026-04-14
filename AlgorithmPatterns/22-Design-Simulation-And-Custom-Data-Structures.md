@@ -35,3 +35,8 @@
 
 ## 7. Interview answer in one line
 - Design and simulation problems are solved by choosing the right underlying data structures so all required operations stay correct and efficient together.
+
+## More interview practice
+- [LeetCode 355 - Design Twitter](https://leetcode.com/problems/design-twitter/)
+- [LeetCode 706 - Design HashMap](https://leetcode.com/problems/design-hashmap/)
+- [LeetCode 729 - My Calendar I](https://leetcode.com/problems/my-calendar-i/)

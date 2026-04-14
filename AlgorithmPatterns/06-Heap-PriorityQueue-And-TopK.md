@@ -61,3 +61,8 @@ int kthLargest(int[] nums, int k) {
 
 ## 9. Interview answer in one line
 - Heap is used when you must repeatedly access or maintain the best candidate efficiently, especially for top-k and stream problems.
+
+## More interview practice
+- [LeetCode 703 - Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+- [LeetCode 373 - Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
+- [LeetCode 973 - K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)

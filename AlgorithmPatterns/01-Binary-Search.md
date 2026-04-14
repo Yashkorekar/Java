@@ -105,3 +105,8 @@ int searchAnswer(int low, int high) {
 
 ## 10. Interview answer in one line
 - Binary search is used when the search space is ordered or monotonic and each step can eliminate half the possibilities.
+
+## More interview practice
+- [LeetCode 74 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+- [LeetCode 162 - Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+- [LeetCode 540 - Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)

@@ -36,3 +36,8 @@
 
 ## 8. Interview answer in one line
 - Use Fenwick tree or segment tree when the problem has many updates and many range queries, and simple prefix sums are no longer efficient enough.
+
+## More interview practice
+- [LeetCode 327 - Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
+- [LeetCode 493 - Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
+- [LeetCode 699 - Falling Squares](https://leetcode.com/problems/falling-squares/)

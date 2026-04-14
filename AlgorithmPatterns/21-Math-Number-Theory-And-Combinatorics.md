@@ -36,3 +36,8 @@
 
 ## 6. Interview answer in one line
 - Math-based questions are solved by spotting the right arithmetic invariant, divisibility rule, or counting formula before reaching for heavy data structures.
+
+## More interview practice
+- [LeetCode 29 - Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)
+- [LeetCode 172 - Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
+- [LeetCode 202 - Happy Number](https://leetcode.com/problems/happy-number/)

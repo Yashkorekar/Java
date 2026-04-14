@@ -65,3 +65,8 @@ void backtrack(List<Integer> path, int start, int[] nums, List<List<Integer>> re
 
 ## 10. Interview answer in one line
 - Backtracking is for exploring all valid choices with recursion and pruning invalid paths early.
+
+## More interview practice
+- [LeetCode 22 - Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+- [LeetCode 17 - Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+- [LeetCode 40 - Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)

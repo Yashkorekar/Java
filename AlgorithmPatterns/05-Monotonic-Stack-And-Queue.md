@@ -84,3 +84,8 @@ int[] maxSlidingWindow(int[] nums, int k) {
 
 ## 9. Interview answer in one line
 - Monotonic stack or queue is used when you need nearest greater or smaller relationships or window extrema in linear time.
+
+## More interview practice
+- [LeetCode 503 - Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
+- [LeetCode 901 - Online Stock Span](https://leetcode.com/problems/online-stock-span/)
+- [LeetCode 862 - Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)
