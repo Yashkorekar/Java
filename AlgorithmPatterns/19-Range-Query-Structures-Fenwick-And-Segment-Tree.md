@@ -24,10 +24,10 @@
 - Segment tree: more general range queries or updates.
 
 ## 6. Common question types
-- Range sum query mutable.
-- Count smaller numbers after self variants.
-- Dynamic frequency or inversion counting.
-- Interval aggregation with frequent updates.
+- Range sum query mutable. Example: [LeetCode 307 - Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
+- Count smaller numbers after self variants. Example: [LeetCode 315 - Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+- Dynamic frequency or inversion counting. Example: [LeetCode 1649 - Create Sorted Array through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/)
+- Interval aggregation with frequent updates. Example: [LeetCode 715 - Range Module](https://leetcode.com/problems/range-module/)
 
 ## 7. Common mistakes
 - One-based indexing confusion in Fenwick tree.

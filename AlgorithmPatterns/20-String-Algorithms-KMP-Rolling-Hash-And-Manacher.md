@@ -29,11 +29,11 @@
 - Rare in interviews, but high value for advanced string rounds.
 
 ## 7. Common question types
-- Implement substring search.
-- Repeated string or repeated pattern detection.
-- Longest happy prefix or prefix-suffix problems.
-- Longest duplicated substring.
-- Longest palindromic substring advanced variant.
+- Implement substring search. Example: [LeetCode 28 - Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
+- Repeated string or repeated pattern detection. Examples: [LeetCode 459 - Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/), [LeetCode 686 - Repeated String Match](https://leetcode.com/problems/repeated-string-match/)
+- Longest happy prefix or prefix-suffix problems. Example: [LeetCode 1392 - Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/)
+- Longest duplicated substring. Example: [LeetCode 1044 - Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)
+- Longest palindromic substring advanced variant. Example: [LeetCode 5 - Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 ## 8. Common mistakes
 - Using advanced string algorithms when simpler hash map or sliding window is enough.

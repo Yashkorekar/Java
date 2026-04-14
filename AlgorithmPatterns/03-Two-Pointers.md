@@ -80,13 +80,13 @@ int removeDuplicates(int[] nums) {
 - Confusing two pointers with sliding window.
 
 ## 9. Practice question types
-- Pair sum in sorted array.
-- Three sum.
-- Remove duplicates.
-- Move zeros.
-- Valid palindrome.
-- Middle of linked list.
-- Detect cycle in linked list.
+- Pair sum in sorted array. Example: [LeetCode 167 - Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- Three sum. Example: [LeetCode 15 - 3Sum](https://leetcode.com/problems/3sum/)
+- Remove duplicates. Example: [LeetCode 26 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+- Move zeros. Example: [LeetCode 283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+- Valid palindrome. Example: [LeetCode 125 - Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+- Middle of linked list. Example: [LeetCode 876 - Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+- Detect cycle in linked list. Example: [LeetCode 141 - Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 ## 10. Interview answer in one line
 - Two pointers is useful when two moving indices can cut the search space faster than checking every pair or range.

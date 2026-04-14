@@ -73,11 +73,11 @@ int countSubarraysWithSum(int[] nums, int target) {
 - Updating hash map in the wrong order.
 
 ## 10. Practice question types
-- Count subarrays with exact sum.
-- Longest subarray with target sum.
-- Number of subarrays divisible by `k`.
-- Equal zeros and ones.
-- Immutable range sum query.
+- Count subarrays with exact sum. Example: [LeetCode 560 - Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+- Longest subarray with target sum. Example: [LeetCode 325 - Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
+- Number of subarrays divisible by `k`. Example: [LeetCode 974 - Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+- Equal zeros and ones. Example: [LeetCode 525 - Contiguous Array](https://leetcode.com/problems/contiguous-array/)
+- Immutable range sum query. Example: [LeetCode 303 - Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
 
 ## 11. Interview answer in one line
 - Prefix sum and hashing are used when a subarray condition can be rewritten using cumulative state and fast lookup of earlier states.

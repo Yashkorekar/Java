@@ -96,12 +96,12 @@ int searchAnswer(int low, int high) {
 - Forgetting binary search only works with ordered or monotonic structure.
 
 ## 9. Practice question types
-- Find a target in sorted array.
-- Find first and last position of target.
-- Find insertion point.
-- Search in rotated sorted array.
-- Find minimum in rotated sorted array.
-- Minimum speed or capacity to finish work.
+- Find a target in sorted array. Example: [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/)
+- Find first and last position of target. Example: [LeetCode 34 - Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- Find insertion point. Example: [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+- Search in rotated sorted array. Example: [LeetCode 33 - Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- Find minimum in rotated sorted array. Example: [LeetCode 153 - Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+- Minimum speed or capacity to finish work. Examples: [LeetCode 875 - Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/), [LeetCode 1011 - Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 
 ## 10. Interview answer in one line
 - Binary search is used when the search space is ordered or monotonic and each step can eliminate half the possibilities.

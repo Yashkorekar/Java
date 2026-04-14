@@ -56,12 +56,12 @@ void backtrack(List<Integer> path, int start, int[] nums, List<List<Integer>> re
 - Handling duplicates incorrectly.
 
 ## 9. Practice question types
-- All subsets.
-- All permutations.
-- Combination sum.
-- Palindrome partitioning.
-- N-Queens.
-- Word search.
+- All subsets. Example: [LeetCode 78 - Subsets](https://leetcode.com/problems/subsets/)
+- All permutations. Example: [LeetCode 46 - Permutations](https://leetcode.com/problems/permutations/)
+- Combination sum. Example: [LeetCode 39 - Combination Sum](https://leetcode.com/problems/combination-sum/)
+- Palindrome partitioning. Example: [LeetCode 131 - Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+- N-Queens. Example: [LeetCode 51 - N-Queens](https://leetcode.com/problems/n-queens/)
+- Word search. Example: [LeetCode 79 - Word Search](https://leetcode.com/problems/word-search/)
 
 ## 10. Interview answer in one line
 - Backtracking is for exploring all valid choices with recursion and pruning invalid paths early.

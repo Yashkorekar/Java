@@ -21,12 +21,12 @@
 - Pigeonhole or counting insight
 
 ## 4. Common question types
-- Check power of two or prime.
-- Count primes.
-- GCD of array patterns.
-- Modular exponentiation.
-- Combinatorial counting of arrangements.
-- Fraction or probability simplification.
+- Check power of two or prime. Example: [LeetCode 231 - Power of Two](https://leetcode.com/problems/power-of-two/)
+- Count primes. Example: [LeetCode 204 - Count Primes](https://leetcode.com/problems/count-primes/)
+- GCD of array patterns. Example: [LeetCode 1979 - Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)
+- Modular exponentiation. Examples: [LeetCode 50 - Pow(x, n)](https://leetcode.com/problems/powx-n/), [LeetCode 372 - Super Pow](https://leetcode.com/problems/super-pow/)
+- Combinatorial counting of arrangements. Example: [LeetCode 526 - Beautiful Arrangement](https://leetcode.com/problems/beautiful-arrangement/)
+- Fraction or probability simplification. Example: [LeetCode 592 - Fraction Addition and Subtraction](https://leetcode.com/problems/fraction-addition-and-subtraction/)
 
 ## 5. Common mistakes
 - Integer overflow.

@@ -29,11 +29,11 @@ PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1])
 - Prim uses a growing tree + priority queue.
 
 ## 7. Common advanced graph questions
-- Network delay time
-- Cheapest flights within K stops
-- Minimum spanning cost to connect points
-- Course schedule variants with weights or costs
-- Word ladder shortest transformation path
+- Network delay time. Example: [LeetCode 743 - Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+- Cheapest flights within K stops. Example: [LeetCode 787 - Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+- Minimum spanning cost to connect points. Example: [LeetCode 1584 - Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- Course schedule variants with weights or costs. Example: [LeetCode 2050 - Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)
+- Word ladder shortest transformation path. Examples: [LeetCode 127 - Word Ladder](https://leetcode.com/problems/word-ladder/), [LeetCode 126 - Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)
 
 ## 8. Common mistakes
 - Using BFS on weighted shortest-path problems.

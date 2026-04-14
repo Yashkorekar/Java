@@ -32,30 +32,30 @@
 ## 2. Common question families
 
 ### Array and string families
-- Binary search on sorted data
-- Sliding window on substrings
-- Prefix sum on subarrays
-- Two pointers on sorted arrays
-- Monotonic stack and queue for next greater or window extrema
-- String algorithms for advanced prefix or palindrome problems
-- Math and bit tricks for arithmetic-heavy questions
+- Binary search on sorted data. Example: [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/)
+- Sliding window on substrings. Example: [LeetCode 3 - Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+- Prefix sum on subarrays. Example: [LeetCode 560 - Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+- Two pointers on sorted arrays. Example: [LeetCode 167 - Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- Monotonic stack and queue for next greater or window extrema. Examples: [LeetCode 496 - Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/), [LeetCode 239 - Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+- String algorithms for advanced prefix or palindrome problems. Examples: [LeetCode 1392 - Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/), [LeetCode 5 - Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+- Math and bit tricks for arithmetic-heavy questions. Examples: [LeetCode 231 - Power of Two](https://leetcode.com/problems/power-of-two/), [LeetCode 136 - Single Number](https://leetcode.com/problems/single-number/)
 
 ### Tree and graph families
-- Tree DFS and BFS
-- Graph BFS and DFS
-- Topological sorting for dependencies
-- Union Find for grouping and connectivity
-- Weighted shortest path and MST patterns
-- Matrix and grid traversal
-- Linked list pointer patterns
+- Tree DFS and BFS. Examples: [LeetCode 104 - Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/), [LeetCode 102 - Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- Graph BFS and DFS. Example: [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- Topological sorting for dependencies. Example: [LeetCode 210 - Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+- Union Find for grouping and connectivity. Example: [LeetCode 547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+- Weighted shortest path and MST patterns. Examples: [LeetCode 743 - Network Delay Time](https://leetcode.com/problems/network-delay-time/), [LeetCode 1584 - Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- Matrix and grid traversal. Examples: [LeetCode 54 - Spiral Matrix](https://leetcode.com/problems/spiral-matrix/), [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- Linked list pointer patterns. Example: [LeetCode 206 - Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 ### Optimization families
-- Heap for top-k and streaming
-- Greedy for intervals and local-best proofs
-- DP for overlapping subproblems
-- Advanced DP for knapsack, LIS, intervals, and subset state
-- Range query structures when queries and updates repeat
-- Design problems where API and complexity matter together
+- Heap for top-k and streaming. Examples: [LeetCode 347 - Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/), [LeetCode 295 - Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+- Greedy for intervals and local-best proofs. Examples: [LeetCode 56 - Merge Intervals](https://leetcode.com/problems/merge-intervals/), [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
+- DP for overlapping subproblems. Example: [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+- Advanced DP for knapsack, LIS, intervals, and subset state. Examples: [LeetCode 416 - Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/), [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+- Range query structures when queries and updates repeat. Example: [LeetCode 307 - Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
+- Design problems where API and complexity matter together. Example: [LeetCode 146 - LRU Cache](https://leetcode.com/problems/lru-cache/)
 
 ## 3. 45-day study order
 1. Binary search

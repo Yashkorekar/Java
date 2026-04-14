@@ -76,11 +76,11 @@ int[] maxSlidingWindow(int[] nums, int k) {
 - Not understanding whether equality should pop or stay.
 
 ## 8. Practice question types
-- Next greater element.
-- Daily temperatures.
-- Largest histogram rectangle.
-- Sliding window maximum.
-- Sum of subarray minimums style problems.
+- Next greater element. Example: [LeetCode 496 - Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+- Daily temperatures. Example: [LeetCode 739 - Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+- Largest histogram rectangle. Example: [LeetCode 84 - Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+- Sliding window maximum. Example: [LeetCode 239 - Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+- Sum of subarray minimums style problems. Example: [LeetCode 907 - Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
 
 ## 9. Interview answer in one line
 - Monotonic stack or queue is used when you need nearest greater or smaller relationships or window extrema in linear time.

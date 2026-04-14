@@ -102,11 +102,11 @@ List<Integer> topoSort(int n, List<List<Integer>> graph, int[] indegree) {
 - Forgetting indegree updates in topological sort.
 
 ## 11. Practice question types
-- Count connected components.
-- Grid BFS or DFS.
-- Shortest path in binary matrix style.
-- Course dependency ordering.
-- Cycle detection.
+- Count connected components. Example: [LeetCode 547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+- Grid BFS or DFS. Example: [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- Shortest path in binary matrix style. Example: [LeetCode 1091 - Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+- Course dependency ordering. Example: [LeetCode 210 - Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+- Cycle detection. Example: [LeetCode 207 - Course Schedule](https://leetcode.com/problems/course-schedule/)
 
 ## 12. Interview answer in one line
 - Use BFS for level-wise or shortest-path-in-unweighted problems, DFS for deep traversal and component or cycle exploration, and topological sort for dependency ordering.

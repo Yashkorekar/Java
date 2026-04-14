@@ -84,13 +84,13 @@ List<List<Integer>> levelOrder(TreeNode root) {
 - For BST validation, checking only direct children instead of full valid range.
 
 ## 10. Practice question types
-- Traversals.
-- Height or balance.
-- Validate BST.
-- Diameter.
-- LCA.
-- Level-order traversal.
-- Kth smallest in BST.
+- Traversals. Example: [LeetCode 94 - Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- Height or balance. Examples: [LeetCode 104 - Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/), [LeetCode 110 - Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+- Validate BST. Example: [LeetCode 98 - Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+- Diameter. Example: [LeetCode 543 - Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+- LCA. Example: [LeetCode 236 - Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+- Level-order traversal. Example: [LeetCode 102 - Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- Kth smallest in BST. Example: [LeetCode 230 - Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 
 ## 11. Interview answer in one line
 - Tree problems are usually solved by deciding what each recursive call returns and how to combine left and right subtree results.

@@ -53,12 +53,12 @@ int[][] merge(int[][] intervals) {
 - Confusing interval overlap condition.
 
 ## 8. Practice question types
-- Merge intervals.
-- Insert interval.
-- Non-overlapping intervals.
-- Meeting rooms.
-- Minimum arrows to burst balloons style.
-- Jump game.
+- Merge intervals. Example: [LeetCode 56 - Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+- Insert interval. Example: [LeetCode 57 - Insert Interval](https://leetcode.com/problems/insert-interval/)
+- Non-overlapping intervals. Example: [LeetCode 435 - Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- Meeting rooms. Example: [LeetCode 253 - Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+- Minimum arrows to burst balloons style. Example: [LeetCode 452 - Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+- Jump game. Example: [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
 
 ## 9. Interview answer in one line
 - Greedy works when a locally best decision can be proven to preserve a globally optimal answer, and interval problems often become greedy after sorting.

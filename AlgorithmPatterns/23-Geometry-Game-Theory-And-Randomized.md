@@ -9,9 +9,9 @@
 - Points, slopes, line intersections, rectangles, distances, area.
 
 ### Common questions
-- Max points on a line.
-- Rectangle overlap.
-- Closest points or skyline-style geometry variants.
+- Max points on a line. Example: [LeetCode 149 - Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/)
+- Rectangle overlap. Example: [LeetCode 836 - Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)
+- Closest points or skyline-style geometry variants. Examples: [LeetCode 973 - K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/), [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
 ## 3. Game theory / minimax
 
@@ -21,8 +21,8 @@
 - Need winning or losing state.
 
 ### Common questions
-- Stone game style DP or minimax.
-- Can first player win?
+- Stone game style DP or minimax. Example: [LeetCode 877 - Stone Game](https://leetcode.com/problems/stone-game/)
+- Can first player win? Example: [LeetCode 486 - Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
 
 ## 4. Randomized patterns
 
@@ -32,9 +32,9 @@
 - Need randomized pivot or reservoir sample.
 
 ### Common questions
-- Shuffle array.
-- Random pick index.
-- Reservoir sampling in streams.
+- Shuffle array. Example: [LeetCode 384 - Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/)
+- Random pick index. Example: [LeetCode 398 - Random Pick Index](https://leetcode.com/problems/random-pick-index/)
+- Reservoir sampling in streams. Example: [LeetCode 382 - Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)
 
 ## 5. Why this category matters
 - These are not the first patterns to study.
