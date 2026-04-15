@@ -42,6 +42,11 @@
 - Advanced DP starts when basic one-dimensional state is not enough and you need states over capacity, intervals, subsets, or subsequence structure.
 
 ## More interview practice
-- [LeetCode 416 - Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
-- [LeetCode 312 - Burst Balloons](https://leetcode.com/problems/burst-balloons/)
-- [LeetCode 354 - Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+### Must do
+- [LeetCode 416 - Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) (Medium)
+
+### Very common
+- [LeetCode 312 - Burst Balloons](https://leetcode.com/problems/burst-balloons/) (Hard)
+
+### Good follow-up
+- [LeetCode 354 - Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/) (Hard)

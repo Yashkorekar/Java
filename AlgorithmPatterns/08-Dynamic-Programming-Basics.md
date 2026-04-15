@@ -68,18 +68,23 @@ int climbStairs(int n) {
 - Not reducing space when possible after understanding the full DP first.
 
 ## 9. Practice question types
-- Climbing stairs. Example: [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-- House robber. Example: [LeetCode 198 - House Robber](https://leetcode.com/problems/house-robber/)
-- Coin change. Example: [LeetCode 322 - Coin Change](https://leetcode.com/problems/coin-change/)
-- Longest increasing subsequence. Example: [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-- Longest common subsequence. Example: [LeetCode 1143 - Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
-- Edit distance. Example: [LeetCode 72 - Edit Distance](https://leetcode.com/problems/edit-distance/)
-- Unique paths. Example: [LeetCode 62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
+- Climbing stairs. Example: [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (Easy)
+- House robber. Example: [LeetCode 198 - House Robber](https://leetcode.com/problems/house-robber/) (Medium)
+- Coin change. Example: [LeetCode 322 - Coin Change](https://leetcode.com/problems/coin-change/) (Medium)
+- Longest increasing subsequence. Example: [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) (Medium)
+- Longest common subsequence. Example: [LeetCode 1143 - Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) (Medium)
+- Edit distance. Example: [LeetCode 72 - Edit Distance](https://leetcode.com/problems/edit-distance/) (Medium)
+- Unique paths. Example: [LeetCode 62 - Unique Paths](https://leetcode.com/problems/unique-paths/) (Medium)
 
 ## 10. Interview answer in one line
 - Dynamic programming solves repeated-state optimization or counting problems by storing answers to smaller states and building from them.
 
 ## More interview practice
-- [LeetCode 139 - Word Break](https://leetcode.com/problems/word-break/)
-- [LeetCode 91 - Decode Ways](https://leetcode.com/problems/decode-ways/)
-- [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+### Must do
+- [LeetCode 139 - Word Break](https://leetcode.com/problems/word-break/) (Medium)
+
+### Very common
+- [LeetCode 91 - Decode Ways](https://leetcode.com/problems/decode-ways/) (Medium)
+
+### Good follow-up
+- [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) (Medium)

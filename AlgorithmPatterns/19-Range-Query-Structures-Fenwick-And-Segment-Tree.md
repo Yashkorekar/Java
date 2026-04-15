@@ -24,10 +24,10 @@
 - Segment tree: more general range queries or updates.
 
 ## 6. Common question types
-- Range sum query mutable. Example: [LeetCode 307 - Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
-- Count smaller numbers after self variants. Example: [LeetCode 315 - Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
-- Dynamic frequency or inversion counting. Example: [LeetCode 1649 - Create Sorted Array through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/)
-- Interval aggregation with frequent updates. Example: [LeetCode 715 - Range Module](https://leetcode.com/problems/range-module/)
+- Range sum query mutable. Example: [LeetCode 307 - Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) (Medium)
+- Count smaller numbers after self variants. Example: [LeetCode 315 - Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) (Hard)
+- Dynamic frequency or inversion counting. Example: [LeetCode 1649 - Create Sorted Array through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/) (Hard)
+- Interval aggregation with frequent updates. Example: [LeetCode 715 - Range Module](https://leetcode.com/problems/range-module/) (Hard)
 
 ## 7. Common mistakes
 - One-based indexing confusion in Fenwick tree.
@@ -38,6 +38,11 @@
 - Use Fenwick tree or segment tree when the problem has many updates and many range queries, and simple prefix sums are no longer efficient enough.
 
 ## More interview practice
-- [LeetCode 327 - Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
-- [LeetCode 493 - Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
-- [LeetCode 699 - Falling Squares](https://leetcode.com/problems/falling-squares/)
+### Must do
+- [LeetCode 493 - Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) (Hard)
+
+### Very common
+- [LeetCode 327 - Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) (Hard)
+
+### Good follow-up
+- [LeetCode 699 - Falling Squares](https://leetcode.com/problems/falling-squares/) (Hard)

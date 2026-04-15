@@ -53,17 +53,22 @@ int[][] merge(int[][] intervals) {
 - Confusing interval overlap condition.
 
 ## 8. Practice question types
-- Merge intervals. Example: [LeetCode 56 - Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-- Insert interval. Example: [LeetCode 57 - Insert Interval](https://leetcode.com/problems/insert-interval/)
-- Non-overlapping intervals. Example: [LeetCode 435 - Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
-- Meeting rooms. Example: [LeetCode 253 - Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
-- Minimum arrows to burst balloons style. Example: [LeetCode 452 - Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
-- Jump game. Example: [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
+- Merge intervals. Example: [LeetCode 56 - Merge Intervals](https://leetcode.com/problems/merge-intervals/) (Medium)
+- Insert interval. Example: [LeetCode 57 - Insert Interval](https://leetcode.com/problems/insert-interval/) (Medium)
+- Non-overlapping intervals. Example: [LeetCode 435 - Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) (Medium)
+- Meeting rooms. Example: [LeetCode 253 - Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) (Medium)
+- Minimum arrows to burst balloons style. Example: [LeetCode 452 - Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) (Medium)
+- Jump game. Example: [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/) (Medium)
 
 ## 9. Interview answer in one line
 - Greedy works when a locally best decision can be proven to preserve a globally optimal answer, and interval problems often become greedy after sorting.
 
 ## More interview practice
-- [LeetCode 134 - Gas Station](https://leetcode.com/problems/gas-station/)
-- [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
-- [LeetCode 763 - Partition Labels](https://leetcode.com/problems/partition-labels/)
+### Must do
+- [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/) (Medium)
+
+### Very common
+- [LeetCode 134 - Gas Station](https://leetcode.com/problems/gas-station/) (Medium)
+
+### Good follow-up
+- [LeetCode 763 - Partition Labels](https://leetcode.com/problems/partition-labels/) (Medium)

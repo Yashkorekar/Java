@@ -96,17 +96,22 @@ int searchAnswer(int low, int high) {
 - Forgetting binary search only works with ordered or monotonic structure.
 
 ## 9. Practice question types
-- Find a target in sorted array. Example: [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/)
-- Find first and last position of target. Example: [LeetCode 34 - Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-- Find insertion point. Example: [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/)
-- Search in rotated sorted array. Example: [LeetCode 33 - Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-- Find minimum in rotated sorted array. Example: [LeetCode 153 - Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-- Minimum speed or capacity to finish work. Examples: [LeetCode 875 - Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/), [LeetCode 1011 - Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+- Find a target in sorted array. Example: [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/) (Easy)
+- Find first and last position of target. Example: [LeetCode 34 - Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) (Medium)
+- Find insertion point. Example: [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/) (Easy)
+- Search in rotated sorted array. Example: [LeetCode 33 - Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium)
+- Find minimum in rotated sorted array. Example: [LeetCode 153 - Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium)
+- Minimum speed or capacity to finish work. Examples: [LeetCode 875 - Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) (Medium), [LeetCode 1011 - Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) (Medium)
 
 ## 10. Interview answer in one line
 - Binary search is used when the search space is ordered or monotonic and each step can eliminate half the possibilities.
 
 ## More interview practice
-- [LeetCode 74 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-- [LeetCode 162 - Find Peak Element](https://leetcode.com/problems/find-peak-element/)
-- [LeetCode 540 - Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+### Must do
+- [LeetCode 74 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (Medium)
+
+### Very common
+- [LeetCode 162 - Find Peak Element](https://leetcode.com/problems/find-peak-element/) (Medium)
+
+### Good follow-up
+- [LeetCode 540 - Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) (Medium)

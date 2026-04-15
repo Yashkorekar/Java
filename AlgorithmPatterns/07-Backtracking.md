@@ -56,17 +56,22 @@ void backtrack(List<Integer> path, int start, int[] nums, List<List<Integer>> re
 - Handling duplicates incorrectly.
 
 ## 9. Practice question types
-- All subsets. Example: [LeetCode 78 - Subsets](https://leetcode.com/problems/subsets/)
-- All permutations. Example: [LeetCode 46 - Permutations](https://leetcode.com/problems/permutations/)
-- Combination sum. Example: [LeetCode 39 - Combination Sum](https://leetcode.com/problems/combination-sum/)
-- Palindrome partitioning. Example: [LeetCode 131 - Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
-- N-Queens. Example: [LeetCode 51 - N-Queens](https://leetcode.com/problems/n-queens/)
-- Word search. Example: [LeetCode 79 - Word Search](https://leetcode.com/problems/word-search/)
+- All subsets. Example: [LeetCode 78 - Subsets](https://leetcode.com/problems/subsets/) (Medium)
+- All permutations. Example: [LeetCode 46 - Permutations](https://leetcode.com/problems/permutations/) (Medium)
+- Combination sum. Example: [LeetCode 39 - Combination Sum](https://leetcode.com/problems/combination-sum/) (Medium)
+- Palindrome partitioning. Example: [LeetCode 131 - Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) (Medium)
+- N-Queens. Example: [LeetCode 51 - N-Queens](https://leetcode.com/problems/n-queens/) (Hard)
+- Word search. Example: [LeetCode 79 - Word Search](https://leetcode.com/problems/word-search/) (Medium)
 
 ## 10. Interview answer in one line
 - Backtracking is for exploring all valid choices with recursion and pruning invalid paths early.
 
 ## More interview practice
-- [LeetCode 22 - Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
-- [LeetCode 17 - Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-- [LeetCode 40 - Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+### Must do
+- [LeetCode 22 - Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) (Medium)
+
+### Very common
+- [LeetCode 17 - Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) (Medium)
+
+### Good follow-up
+- [LeetCode 40 - Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) (Medium)

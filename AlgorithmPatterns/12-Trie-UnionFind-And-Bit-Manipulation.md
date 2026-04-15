@@ -24,9 +24,9 @@ class TrieNode {
 ```
 
 ### Common questions
-- Insert and search word. Example: [LeetCode 208 - Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- Starts with prefix. Example: [LeetCode 208 - Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- Word search with dictionary. Example: [LeetCode 212 - Word Search II](https://leetcode.com/problems/word-search-ii/)
+- Insert and search word. Example: [LeetCode 208 - Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) (Medium)
+- Starts with prefix. Example: [LeetCode 208 - Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) (Medium)
+- Word search with dictionary. Example: [LeetCode 212 - Word Search II](https://leetcode.com/problems/word-search-ii/) (Hard)
 
 ## 3. Union Find / Disjoint Set Union
 
@@ -81,9 +81,9 @@ class DSU {
 ```
 
 ### Common questions
-- Number of provinces. Example: [LeetCode 547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
-- Redundant connection. Example: [LeetCode 684 - Redundant Connection](https://leetcode.com/problems/redundant-connection/)
-- Accounts merging style problems. Example: [LeetCode 721 - Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+- Number of provinces. Example: [LeetCode 547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/) (Medium)
+- Redundant connection. Example: [LeetCode 684 - Redundant Connection](https://leetcode.com/problems/redundant-connection/) (Medium)
+- Accounts merging style problems. Example: [LeetCode 721 - Accounts Merge](https://leetcode.com/problems/accounts-merge/) (Medium)
 
 ## 4. Bit manipulation
 
@@ -100,10 +100,10 @@ class DSU {
 - A power of two has exactly one set bit.
 
 ### Common questions
-- Single number with XOR. Example: [LeetCode 136 - Single Number](https://leetcode.com/problems/single-number/)
-- Count set bits. Example: [LeetCode 338 - Counting Bits](https://leetcode.com/problems/counting-bits/)
-- Generate subsets using bitmask. Example: [LeetCode 78 - Subsets](https://leetcode.com/problems/subsets/)
-- Power of two checks. Example: [LeetCode 231 - Power of Two](https://leetcode.com/problems/power-of-two/)
+- Single number with XOR. Example: [LeetCode 136 - Single Number](https://leetcode.com/problems/single-number/) (Easy)
+- Count set bits. Example: [LeetCode 338 - Counting Bits](https://leetcode.com/problems/counting-bits/) (Easy)
+- Generate subsets using bitmask. Example: [LeetCode 78 - Subsets](https://leetcode.com/problems/subsets/) (Medium)
+- Power of two checks. Example: [LeetCode 231 - Power of Two](https://leetcode.com/problems/power-of-two/) (Easy)
 
 ## 5. Common mistakes
 - Choosing trie when hash set is enough.
@@ -114,9 +114,14 @@ class DSU {
 - Trie is for prefix-based string lookup, Union Find is for dynamic connectivity, and bit manipulation is for compact state and XOR-style tricks.
 
 ## More interview practice
-- Trie: [LeetCode 1268 - Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
-- Trie: [LeetCode 648 - Replace Words](https://leetcode.com/problems/replace-words/)
-- Union Find: [LeetCode 1319 - Number of Operations to Make Network Connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
-- Union Find: [LeetCode 1202 - Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)
-- Bit manipulation: [LeetCode 260 - Single Number III](https://leetcode.com/problems/single-number-iii/)
-- Bit manipulation: [LeetCode 190 - Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+### Must do
+- Trie: [LeetCode 1268 - Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/) (Medium)
+- Union Find: [LeetCode 1319 - Number of Operations to Make Network Connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/) (Medium)
+
+### Very common
+- Trie: [LeetCode 648 - Replace Words](https://leetcode.com/problems/replace-words/) (Medium)
+- Bit manipulation: [LeetCode 260 - Single Number III](https://leetcode.com/problems/single-number-iii/) (Medium)
+
+### Good follow-up
+- Union Find: [LeetCode 1202 - Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/) (Medium)
+- Bit manipulation: [LeetCode 190 - Reverse Bits](https://leetcode.com/problems/reverse-bits/) (Easy)

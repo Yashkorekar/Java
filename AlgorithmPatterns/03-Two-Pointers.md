@@ -80,18 +80,23 @@ int removeDuplicates(int[] nums) {
 - Confusing two pointers with sliding window.
 
 ## 9. Practice question types
-- Pair sum in sorted array. Example: [LeetCode 167 - Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-- Three sum. Example: [LeetCode 15 - 3Sum](https://leetcode.com/problems/3sum/)
-- Remove duplicates. Example: [LeetCode 26 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
-- Move zeros. Example: [LeetCode 283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/)
-- Valid palindrome. Example: [LeetCode 125 - Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-- Middle of linked list. Example: [LeetCode 876 - Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
-- Detect cycle in linked list. Example: [LeetCode 141 - Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- Pair sum in sorted array. Example: [LeetCode 167 - Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) (Medium)
+- Three sum. Example: [LeetCode 15 - 3Sum](https://leetcode.com/problems/3sum/) (Medium)
+- Remove duplicates. Example: [LeetCode 26 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (Easy)
+- Move zeros. Example: [LeetCode 283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/) (Easy)
+- Valid palindrome. Example: [LeetCode 125 - Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (Easy)
+- Middle of linked list. Example: [LeetCode 876 - Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) (Easy)
+- Detect cycle in linked list. Example: [LeetCode 141 - Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) (Easy)
 
 ## 10. Interview answer in one line
 - Two pointers is useful when two moving indices can cut the search space faster than checking every pair or range.
 
 ## More interview practice
-- [LeetCode 11 - Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
-- [LeetCode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
-- [LeetCode 680 - Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+### Must do
+- [LeetCode 11 - Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium)
+
+### Very common
+- [LeetCode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) (Hard)
+
+### Good follow-up
+- [LeetCode 680 - Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) (Easy)

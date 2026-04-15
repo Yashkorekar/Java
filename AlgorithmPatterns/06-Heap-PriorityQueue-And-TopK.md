@@ -53,16 +53,21 @@ int kthLargest(int[] nums, int k) {
 - Wrong comparator for custom objects.
 
 ## 8. Practice question types
-- Kth largest or smallest. Example: [LeetCode 215 - Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-- Top K frequent words or numbers. Examples: [LeetCode 347 - Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/), [LeetCode 692 - Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
-- Merge k sorted arrays or lists. Example: [LeetCode 23 - Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
-- Running median. Example: [LeetCode 295 - Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
-- Minimize cost with repeated smallest picks. Example: [LeetCode 1167 - Minimum Cost to Connect Sticks](https://leetcode.com/problems/minimum-cost-to-connect-sticks/)
+- Kth largest or smallest. Example: [LeetCode 215 - Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (Medium)
+- Top K frequent words or numbers. Examples: [LeetCode 347 - Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) (Medium), [LeetCode 692 - Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) (Medium)
+- Merge k sorted arrays or lists. Example: [LeetCode 23 - Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) (Hard)
+- Running median. Example: [LeetCode 295 - Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) (Hard)
+- Minimize cost with repeated smallest picks. Example: [LeetCode 1167 - Minimum Cost to Connect Sticks](https://leetcode.com/problems/minimum-cost-to-connect-sticks/) (Medium)
 
 ## 9. Interview answer in one line
 - Heap is used when you must repeatedly access or maintain the best candidate efficiently, especially for top-k and stream problems.
 
 ## More interview practice
-- [LeetCode 703 - Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
-- [LeetCode 373 - Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
-- [LeetCode 973 - K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+### Must do
+- [LeetCode 973 - K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) (Medium)
+
+### Very common
+- [LeetCode 703 - Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) (Easy)
+
+### Good follow-up
+- [LeetCode 373 - Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) (Medium)

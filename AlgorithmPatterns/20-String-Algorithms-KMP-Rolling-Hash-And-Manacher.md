@@ -29,11 +29,11 @@
 - Rare in interviews, but high value for advanced string rounds.
 
 ## 7. Common question types
-- Implement substring search. Example: [LeetCode 28 - Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
-- Repeated string or repeated pattern detection. Examples: [LeetCode 459 - Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/), [LeetCode 686 - Repeated String Match](https://leetcode.com/problems/repeated-string-match/)
-- Longest happy prefix or prefix-suffix problems. Example: [LeetCode 1392 - Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/)
-- Longest duplicated substring. Example: [LeetCode 1044 - Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)
-- Longest palindromic substring advanced variant. Example: [LeetCode 5 - Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+- Implement substring search. Example: [LeetCode 28 - Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) (Easy)
+- Repeated string or repeated pattern detection. Examples: [LeetCode 459 - Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) (Easy), [LeetCode 686 - Repeated String Match](https://leetcode.com/problems/repeated-string-match/) (Medium)
+- Longest happy prefix or prefix-suffix problems. Example: [LeetCode 1392 - Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) (Hard)
+- Longest duplicated substring. Example: [LeetCode 1044 - Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/) (Hard)
+- Longest palindromic substring advanced variant. Example: [LeetCode 5 - Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) (Medium)
 
 ## 8. Common mistakes
 - Using advanced string algorithms when simpler hash map or sliding window is enough.
@@ -44,6 +44,11 @@
 - Advanced string algorithms matter when simple scanning becomes too slow and the structure of prefixes, substrings, or palindromes must be exploited directly.
 
 ## More interview practice
-- [LeetCode 214 - Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
-- [LeetCode 647 - Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
-- [LeetCode 1316 - Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/)
+### Must do
+- [LeetCode 647 - Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) (Medium)
+
+### Very common
+- [LeetCode 214 - Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) (Hard)
+
+### Good follow-up
+- [LeetCode 1316 - Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/) (Hard)

@@ -102,16 +102,21 @@ List<Integer> topoSort(int n, List<List<Integer>> graph, int[] indegree) {
 - Forgetting indegree updates in topological sort.
 
 ## 11. Practice question types
-- Count connected components. Example: [LeetCode 547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
-- Grid BFS or DFS. Example: [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
-- Shortest path in binary matrix style. Example: [LeetCode 1091 - Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
-- Course dependency ordering. Example: [LeetCode 210 - Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
-- Cycle detection. Example: [LeetCode 207 - Course Schedule](https://leetcode.com/problems/course-schedule/)
+- Count connected components. Example: [LeetCode 547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/) (Medium)
+- Grid BFS or DFS. Example: [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/) (Medium)
+- Shortest path in binary matrix style. Example: [LeetCode 1091 - Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) (Medium)
+- Course dependency ordering. Example: [LeetCode 210 - Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) (Medium)
+- Cycle detection. Example: [LeetCode 207 - Course Schedule](https://leetcode.com/problems/course-schedule/) (Medium)
 
 ## 12. Interview answer in one line
 - Use BFS for level-wise or shortest-path-in-unweighted problems, DFS for deep traversal and component or cycle exploration, and topological sort for dependency ordering.
 
 ## More interview practice
-- [LeetCode 133 - Clone Graph](https://leetcode.com/problems/clone-graph/)
-- [LeetCode 994 - Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
-- [LeetCode 417 - Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+### Must do
+- [LeetCode 994 - Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) (Medium)
+
+### Very common
+- [LeetCode 133 - Clone Graph](https://leetcode.com/problems/clone-graph/) (Medium)
+
+### Good follow-up
+- [LeetCode 417 - Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) (Medium)

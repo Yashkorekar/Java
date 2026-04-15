@@ -76,16 +76,21 @@ int[] maxSlidingWindow(int[] nums, int k) {
 - Not understanding whether equality should pop or stay.
 
 ## 8. Practice question types
-- Next greater element. Example: [LeetCode 496 - Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
-- Daily temperatures. Example: [LeetCode 739 - Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- Largest histogram rectangle. Example: [LeetCode 84 - Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
-- Sliding window maximum. Example: [LeetCode 239 - Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
-- Sum of subarray minimums style problems. Example: [LeetCode 907 - Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
+- Next greater element. Example: [LeetCode 496 - Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) (Easy)
+- Daily temperatures. Example: [LeetCode 739 - Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) (Medium)
+- Largest histogram rectangle. Example: [LeetCode 84 - Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) (Hard)
+- Sliding window maximum. Example: [LeetCode 239 - Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) (Hard)
+- Sum of subarray minimums style problems. Example: [LeetCode 907 - Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) (Medium)
 
 ## 9. Interview answer in one line
 - Monotonic stack or queue is used when you need nearest greater or smaller relationships or window extrema in linear time.
 
 ## More interview practice
-- [LeetCode 503 - Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
-- [LeetCode 901 - Online Stock Span](https://leetcode.com/problems/online-stock-span/)
-- [LeetCode 862 - Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)
+### Must do
+- [LeetCode 901 - Online Stock Span](https://leetcode.com/problems/online-stock-span/) (Medium)
+
+### Very common
+- [LeetCode 503 - Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) (Medium)
+
+### Good follow-up
+- [LeetCode 862 - Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) (Hard)
