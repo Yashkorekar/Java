@@ -8,6 +8,8 @@ This folder covers high-value system design and interview knowledge for common b
 - CDN and edge caching for global delivery and origin protection
 - MongoDB for document-oriented storage
 - Elasticsearch for full-text search and analytics
+- Service discovery for dynamic microservice communication
+- Databases in depth for indexing, replication, sharding, transactions, MVCC, and more
 
 ## Suggested order
 1. `01-Kafka.md`
@@ -19,12 +21,15 @@ This folder covers high-value system design and interview knowledge for common b
 7. `07-CDN-And-Edge-Caching.md`
 8. `08-MongoDB.md`
 9. `09-Elasticsearch.md`
+10. `10-Service-Discovery.md`
+11. `11-Databases-In-Depth.md`
 
 ## How to use these notes
 - Start with the problem each tool solves before memorizing commands or APIs.
 - For each tool, learn the data model, delivery guarantees, scaling model, and failure behavior.
 - Practice the comparison sections; interviewers often ask why one tool is better than another for a given use case.
 - Revise the common mistakes and tricky questions at the end of each file.
+- Each file now has a **Senior-Level Deep Follow-up Questions** section at the bottom. These are the questions interviewers ask AFTER you answer the basics correctly — the ones that test real understanding vs memorization.
 
 ## Quick chooser
 | Need | Best fit | Why |
@@ -36,6 +41,8 @@ This folder covers high-value system design and interview knowledge for common b
 | Faster global content delivery and less origin load | CDN and Edge Caching | Serves cacheable content near users and shields the backend |
 | Flexible JSON-like data with evolving schema | MongoDB | Document database with indexing, replication, and sharding |
 | Full-text search, autocomplete, filters, relevance ranking | Elasticsearch | Search engine built on inverted indexes and distributed querying |
+| Dynamic service-to-service communication in microservices | Service Discovery | Registry-based or DNS-based dynamic endpoint resolution |
+| ACID, CAP, indexing, sharding, replication, MVCC, query optimization | Databases In-Depth | Cross-cutting database concepts that apply to any database choice |
 
 ## Common trap
 - Kafka, RabbitMQ, and Redis are not interchangeable even though all three can move data between services.
@@ -54,6 +61,8 @@ This folder covers high-value system design and interview knowledge for common b
 - If the interviewer says static assets, global latency, edge delivery, cache hit ratio, or origin protection, think CDN.
 - If the interviewer says flexible schema, content catalog, profile documents, nested objects, or easy JSON-style persistence, think MongoDB.
 - If the interviewer says search box, autocomplete, typo tolerance, relevance, or faceted search, think Elasticsearch.
+- If the interviewer says microservices finding each other, dynamic scaling, Eureka, Consul, or registry, think service discovery.
+- If the interviewer says ACID, CAP, indexing, B-tree, sharding, replication, MVCC, or transactions, think databases in-depth concepts.
 
 ## Real-life system case study
 - `04-URL-Shortener-Case-Study.md` explains how Kafka, RabbitMQ, and Redis can fit into one beginner-friendly product design.

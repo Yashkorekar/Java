@@ -163,3 +163,120 @@
 - Search quality depends heavily on analyzers and mappings.
 - `text` is for search; `keyword` is for exactness.
 - Keep the primary source of truth elsewhere.
+
+## 23. Senior-Level Deep Follow-up Questions
+
+### DQ1. How does the inverted index work internally?
+- An inverted index is the core data structure behind full-text search. It maps terms (words) to the documents that contain them.
+- Process:
+  1. When you index a document, the `text` fields go through an **analyzer**: tokenizer (splits text into terms) → filters (lowercase, stemming, stop words removal).
+  2. Each resulting term is added to the inverted index: `term → [doc1, doc5, doc12, ...]` (a posting list).
+  3. Each entry in the posting list can also store: term frequency (how many times the term appears in the doc), positions (where in the text), and offsets (character positions).
+- When you search for "quick brown fox":
+  1. The search query is also analyzed (tokenized, lowercased, etc.).
+  2. The inverted index is looked up for each term: "quick", "brown", "fox".
+  3. The posting lists are intersected (for AND queries) or unioned (for OR queries).
+  4. Relevance scoring (BM25) is applied using term frequency, document frequency, and field length.
+- This is why full-text search is so fast: instead of scanning every document, it uses pre-built lookup tables.
+- `keyword` fields are NOT analyzed. They are stored as-is in a different kind of index structure (doc values / sorted set) for exact matching and aggregations.
+
+### DQ2. How does Elasticsearch's distributed search work (scatter-gather)?
+- An Elasticsearch index is split into **shards**, distributed across nodes. Each shard is an independent Lucene index.
+- When you send a search query:
+  1. **Scatter phase (query phase)**: the coordinating node sends the query to all relevant shards (primary or replica). Each shard executes the query locally and returns the **top N document IDs and scores** (not the full documents).
+  2. **Gather phase (merge)**: the coordinating node collects results from all shards, merges and re-sorts them globally, picks the final top N.
+  3. **Fetch phase**: the coordinating node fetches the actual document content only for the final top N documents from the relevant shards.
+- Why this matters:
+  - Each shard does local work, so more shards = more parallelism.
+  - But more shards = more network overhead, more merge work, and each shard's segment needs memory.
+  - The coordinating node can become a bottleneck if it merges results from too many shards.
+- Senior insight: the optimal shard count depends on data size and query patterns. Rule of thumb: each shard should be 10-50GB. Too many small shards waste resources; too few large shards limit parallelism.
+
+### DQ3. What is the deep pagination problem and how do you solve it?
+- Using `from` + `size` (like SQL's `OFFSET` + `LIMIT`): to get page 100 with size 10 (`from: 990, size: 10`), EACH shard must retrieve and sort the top 1000 documents, send them to the coordinating node, which merges 1000 × N_shards results to pick the final 10.
+- As `from` increases, this becomes extremely expensive. Elasticsearch has a default limit of `from + size ≤ 10,000`.
+- Solutions:
+  - **`search_after`**: uses the sort values of the last document from the previous page as a cursor. Each page only needs to fetch `size` documents from each shard. Very efficient for "next page" navigation but does not support jumping to arbitrary pages.
+  - **Scroll API**: creates a consistent snapshot and returns pages sequentially. Designed for bulk data export, not user-facing pagination. Deprecated in favor of Point in Time (PIT) + `search_after`.
+  - **Point in Time (PIT)**: creates a lightweight snapshot of the index state. Combined with `search_after`, it provides consistent pagination even as the index changes.
+- Senior tip: for user-facing search, most products do not need deep pagination. Google shows ~10 pages max. Use `search_after` for "load more" patterns and PIT for data export.
+
+### DQ4. How does Elasticsearch handle near-real-time (NRT) search?
+- When a document is indexed, it is NOT immediately searchable. It is written to an in-memory buffer.
+- Every 1 second (default `refresh_interval`), the buffer is flushed to a new **Lucene segment** (an immutable mini-index on disk). Only after this "refresh" is the document searchable.
+- This is why Elasticsearch is called "near-real-time" — there is a ~1 second delay between indexing and searchability.
+- You can:
+  - Force a refresh with `_refresh` API (useful in tests, bad in production due to overhead).
+  - Change `refresh_interval` to a longer value for write-heavy workloads (reduces segment creation overhead).
+  - Set `refresh_interval: -1` to disable automatic refresh (for bulk loading).
+- **Segments are immutable**. Deleting a document does not remove it from the segment; it marks it as deleted in a bitmap. The actual data is removed during segment merging.
+
+### DQ5. What is segment merging and why does it matter?
+- Each refresh creates a new segment. Over time, you get many small segments.
+- Searching across many segments is slower because each segment must be searched independently and results merged.
+- **Segment merging**: Elasticsearch (Lucene) periodically merges small segments into larger ones in the background. This:
+  - Removes deleted documents.
+  - Reduces the number of segments.
+  - Improves search performance.
+- Merging is I/O and CPU intensive. During heavy merging, search latency can increase.
+- **Force merge** (`_forcemerge`): manually triggers merging to a target number of segments. Useful for read-only indexes (e.g., time-based indexes that are no longer being written to). Never force merge on actively written indexes.
+- Senior insight: segment management is one of the reasons Elasticsearch performance tuning is nuanced. Too many small segments = slow searches. Merging = CPU/IO cost. The balance is managed automatically but understanding it helps with performance debugging.
+
+### DQ6. How does Elasticsearch relevance scoring work (BM25)?
+- BM25 (Best Match 25) is the default relevance scoring algorithm since Elasticsearch 5.0 (replaced TF-IDF).
+- Factors:
+  - **Term Frequency (TF)**: how many times the search term appears in the document field. More occurrences = higher score, but with diminishing returns (BM25 has a saturation curve, unlike raw TF).
+  - **Inverse Document Frequency (IDF)**: how rare the term is across all documents. Rare terms (e.g., "kubernetes") score higher than common terms (e.g., "the").
+  - **Field length normalization**: shorter fields that contain the term score higher than longer fields. A match in a 5-word title is more relevant than the same match in a 5000-word body.
+- BM25 parameters: `k1` (controls term frequency saturation, default 1.2) and `b` (controls field length normalization, default 0.75).
+- You can customize scoring with:
+  - `boost`: increase the weight of certain fields (e.g., title matches are 3x more important than body matches).
+  - `function_score`: apply custom scoring functions based on document attributes (e.g., boost newer documents, boost by popularity).
+  - `script_score`: write custom scoring logic in Painless script.
+- Senior tip: understanding BM25 helps you explain why search results are ordered the way they are. Use the `_explain` API to see the scoring breakdown for a specific query.
+
+### DQ7. How does Elasticsearch handle cluster state and master election?
+- The **cluster state** is the metadata that describes the cluster: indexes, mappings, shard allocation, node membership. Every node holds a copy.
+- One node is the **master node**, responsible for:
+  - Managing cluster state changes (creating/deleting indexes, shard allocation decisions).
+  - Handling node join/leave events.
+  - Propagating cluster state updates to all nodes.
+- Master election uses a quorum-based approach. In modern Elasticsearch (7.0+), the cluster coordination module uses a Raft-like protocol:
+  - Eligible master nodes vote.
+  - A node needs votes from a majority of master-eligible nodes to become master.
+  - `discovery.seed_hosts` and `cluster.initial_master_nodes` configure the initial bootstrapping.
+- If the master node fails, a new election happens. During election (usually seconds), the cluster cannot make metadata changes but existing searches and indexing to already-allocated shards continue.
+- **Dedicated master nodes**: in production, use 3 dedicated master-eligible nodes that do NOT hold data. This prevents data operations from impacting cluster management.
+- Senior insight: large cluster state (thousands of indexes/shards) can slow down cluster state propagation. This is why "shard count discipline" is important.
+
+### DQ8. How do you do zero-downtime reindexing in Elasticsearch?
+- Unlike databases, you cannot alter the mapping of existing fields in Elasticsearch. If you need to change an analyzer, add a new field type, or restructure mappings, you must reindex.
+- Zero-downtime approach:
+  1. Create a new index (`products-v2`) with the desired mappings.
+  2. Use the `_reindex` API to copy data from the old index (`products-v1`) to the new index.
+  3. Use an **alias** (`products`) that points to the current live index. Applications always use the alias, not the index name directly.
+  4. After reindex completes, atomically switch the alias from `products-v1` to `products-v2` using the `_aliases` API (remove old, add new in one request).
+  5. Delete the old index when ready.
+- During reindexing, the old index still serves live traffic. New writes can be dual-written to both indexes or only to the old index (then re-synced after switch).
+- Senior tip: aliases are fundamental to Elasticsearch operations. Always use aliases for application access, never raw index names.
+
+### DQ9. What is the difference between query context and filter context?
+- **Query context**: "How well does this document match?" Calculates a relevance score. Used for full-text search where ranking matters.
+  - Example: `match` query for "wireless headphones" — returns results sorted by relevance.
+- **Filter context**: "Does this document match yes or no?" No score calculation. Used for exact conditions.
+  - Example: `term` filter for `status: "published"` or `range` filter for `price < 100`.
+- Why it matters for performance:
+  - Filters are cached by Elasticsearch in a bitset cache. Repeated filters are very fast.
+  - Queries with scoring cannot be cached as easily because scores depend on the full index state (IDF changes as documents are added/removed).
+- Best practice: use `bool` query with `must` (scored), `should` (scored, optional), `filter` (not scored, cached), and `must_not` (not scored, cached).
+- Example: search for "wireless headphones" (scored `must`), filter by `category: "electronics"` and `price < 100` (unscored `filter`). This gives relevant ranking while efficiently filtering.
+- Senior insight: putting conditions in `filter` instead of `must` when you do not need scoring dramatically improves performance on large indexes.
+
+### DQ10. How does Elasticsearch handle text analysis at index time vs query time?
+- **Index-time analysis**: when a document is indexed, `text` fields pass through the configured analyzer (tokenizer + filters). The resulting terms are stored in the inverted index. This happens once per document.
+- **Query-time analysis**: when a search query is run, the search terms also pass through an analyzer (by default, the same one used at index time). The resulting terms are looked up in the inverted index.
+- If index-time and query-time analyzers do not match, searches may miss documents. Example: if the index analyzer lowercases terms but the query analyzer does not, searching for "Redis" would not match the indexed term "redis".
+- You can set different analyzers for index and search using `search_analyzer`. This is useful for:
+  - **Autocomplete**: index with `edge_ngram` analyzer (generates prefixes: "r", "re", "red", "redi", "redis") but search with a `standard` analyzer (user types "red" and it matches the "red" prefix in the index).
+  - **Synonym expansion**: expand synonyms at index time or search time depending on your strategy.
+- Senior tip: always test your analysis chain using the `_analyze` API before deploying. Mismatched analysis is one of the most common causes of "why doesn't my search find this document?"
