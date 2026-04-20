@@ -10,6 +10,9 @@ This folder covers high-value system design and interview knowledge for common b
 - Elasticsearch for full-text search and analytics
 - Service discovery for dynamic microservice communication
 - Databases in depth for indexing, replication, sharding, transactions, MVCC, and more
+- Distributed system patterns for consistent hashing, circuit breaker, retry, idempotency, bulkhead, and more
+- Back-of-envelope estimation for QPS, storage, bandwidth, and cache sizing
+- System design case studies for Twitter, WhatsApp, YouTube, Uber, and notification systems
 
 ## Suggested order
 1. `01-Kafka.md`
@@ -23,6 +26,9 @@ This folder covers high-value system design and interview knowledge for common b
 9. `09-Elasticsearch.md`
 10. `10-Service-Discovery.md`
 11. `11-Databases-In-Depth.md`
+12. `12-Distributed-System-Patterns.md`
+13. `13-Back-Of-Envelope-Estimation.md`
+14. `14-System-Design-Case-Studies.md`
 
 ## How to use these notes
 - Start with the problem each tool solves before memorizing commands or APIs.
@@ -43,6 +49,9 @@ This folder covers high-value system design and interview knowledge for common b
 | Full-text search, autocomplete, filters, relevance ranking | Elasticsearch | Search engine built on inverted indexes and distributed querying |
 | Dynamic service-to-service communication in microservices | Service Discovery | Registry-based or DNS-based dynamic endpoint resolution |
 | ACID, CAP, indexing, sharding, replication, MVCC, query optimization | Databases In-Depth | Cross-cutting database concepts that apply to any database choice |
+| Consistent hashing, circuit breaker, retry, idempotency, bulkhead, backpressure | Distributed System Patterns | Technology-agnostic patterns that apply across all distributed systems |
+| QPS estimation, storage calculation, bandwidth, cache sizing | Back-of-Envelope Estimation | Quick math framework for system design interviews |
+| End-to-end system design for real products | System Design Case Studies | Twitter, WhatsApp, YouTube, Uber, Notification system with full walkthroughs |
 
 ## Common trap
 - Kafka, RabbitMQ, and Redis are not interchangeable even though all three can move data between services.
@@ -59,7 +68,10 @@ This folder covers high-value system design and interview knowledge for common b
 - If the interviewer says cache, sessions, counters, ranking, rate limiting, or very fast state lookup, think Redis first.
 - If the interviewer says entry point, traffic routing, SSL termination, rate limiting, or public API front door, think load balancer and API gateway.
 - If the interviewer says static assets, global latency, edge delivery, cache hit ratio, or origin protection, think CDN.
-- If the interviewer says flexible schema, content catalog, profile documents, nested objects, or easy JSON-style persistence, think MongoDB.
+- If the interviewer says flexible schema, content catalog, profile documents, nested objects, or easy JSON-style persistence, think Mo
+- If the interviewer says consistent hashing, circuit breaker, retry strategy, idempotency, bulkhead, or backpressure, think distributed system patterns.
+- If the interviewer says estimate, how many servers, QPS, storage requirements, or back-of-envelope, think estimation guide.
+- If the interviewer says design Twitter, design WhatsApp, design YouTube, design Uber, or design a notification system, think case studies.ngoDB.
 - If the interviewer says search box, autocomplete, typo tolerance, relevance, or faceted search, think Elasticsearch.
 - If the interviewer says microservices finding each other, dynamic scaling, Eureka, Consul, or registry, think service discovery.
 - If the interviewer says ACID, CAP, indexing, B-tree, sharding, replication, MVCC, or transactions, think databases in-depth concepts.
