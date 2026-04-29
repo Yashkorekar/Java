@@ -1,5 +1,9 @@
 # Functions, Data Types, and Vendor Differences — Interview Q&A
 
+> See **01-SQL-Fundamentals.md** for full sample tables and data.
+
+---
+
 ## Why this file matters
 Many SQL interviews start with common syntax, then quickly move into practical functions, type conversion, and database-specific differences.
 
@@ -25,6 +29,12 @@ Interview-safe answer:
 SELECT CAST('2026-03-29' AS DATE);
 ```
 
+**Result:**
+
+| cast       |
+|------------|
+| 2026-03-29 |
+
 ## `COALESCE`, `NULLIF`, and defensive null logic
 - `COALESCE(a, b, c)` returns the first non-null value.
 - `NULLIF(a, b)` returns `NULL` if `a = b`, otherwise returns `a`.
@@ -35,6 +45,14 @@ Example: avoid divide-by-zero.
 SELECT revenue / NULLIF(order_count, 0) AS avg_revenue
 FROM daily_metrics;
 ```
+
+**Result** (assuming daily_metrics has: revenue=10000, order_count=0):
+
+| avg_revenue |
+|-------------|
+| NULL        |
+
+*Without NULLIF, this would cause a divide-by-zero error. NULLIF(0, 0) returns NULL, and any division by NULL yields NULL safely.*
 
 ## `CASE WHEN`
 Very common for categorization, conditional aggregation, and safe branching.
@@ -48,6 +66,19 @@ SELECT emp_name,
        END AS salary_band
 FROM employees;
 ```
+
+**Result:**
+
+| emp_name | salary_band |
+|----------|-------------|
+| Asha     | mid         |
+| Bob      | mid         |
+| Chitra   | mid         |
+| David    | low         |
+| Eva      | mid         |
+| Faisal   | mid         |
+| Gita     | low         |
+| Hari     | low         |
 
 ## String functions interviewers expect
 - `UPPER`, `LOWER`, `TRIM`, `LTRIM`, `RTRIM`
@@ -64,6 +95,16 @@ SELECT customer_name,
        UPPER(TRIM(customer_name)) AS normalized_name
 FROM customers;
 ```
+
+**Result:**
+
+| customer_name | normalized_name |
+|---------------|----------------|
+| Ravi          | RAVI           |
+| Sneha         | SNEHA          |
+| Amit          | AMIT           |
+| Priya         | PRIYA          |
+| Kiran         | KIRAN          |
 
 ## Date/time functions interviewers expect
 - current date/time functions such as `CURRENT_DATE`, `CURRENT_TIMESTAMP`, `NOW()`

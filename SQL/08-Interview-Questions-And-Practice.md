@@ -1,5 +1,10 @@
 # SQL Interview Questions and Practice Set
 
+> See **01-SQL-Fundamentals.md** for full sample tables with all rows.
+> The CREATE TABLE statements and sample data are also in Part 6 below.
+
+---
+
 ## Part 1: Fast theory questions
 1. What is the difference between `WHERE` and `HAVING`?
 2. What is the difference between `DELETE`, `TRUNCATE`, and `DROP`?
@@ -28,6 +33,12 @@ GROUP BY email
 HAVING COUNT(*) > 1;
 ```
 
+**Result:**
+
+| email            |
+|------------------|
+| asha@example.com |
+
 ### 2. Find second highest salary
 
 ```sql
@@ -38,6 +49,12 @@ WHERE salary < (
   FROM employees
 );
 ```
+
+**Result:**
+
+| second_highest_salary |
+|-----------------------|
+| 110000.00             |
 
 Tie-safe rank-based version:
 
@@ -52,6 +69,12 @@ FROM ranked_salary
 WHERE dr = 2;
 ```
 
+**Result:**
+
+| salary    |
+|-----------|
+| 110000.00 |
+
 ### 3. Find employees earning more than department average
 
 ```sql
@@ -64,6 +87,15 @@ WHERE e.salary > (
 );
 ```
 
+**Result** (dept 10 avg≈11166, dept 20 avg=97500, dept 30 avg=66000):
+
+| emp_id | emp_name | dept_id | salary    |
+|--------|----------|---------|----------|
+| 1      | Asha     | 10      | 120000.00 |
+| 6      | Faisal   | 10      | 120000.00 |
+| 5      | Eva      | 20      | 110000.00 |
+| 4      | David    | 30      | 70000.00  |
+
 ### 4. Find departments with at least 5 employees
 
 ```sql
@@ -72,6 +104,10 @@ FROM employees
 GROUP BY dept_id
 HAVING COUNT(*) >= 5;
 ```
+
+**Result:**
+
+*(No rows — no department has 5+ employees in sample data. With `>= 3`, dept_id 10 would qualify.)*
 
 ### 5. Find customers who never placed an order
 
@@ -84,6 +120,12 @@ WHERE NOT EXISTS (
   WHERE o.customer_id = c.customer_id
 );
 ```
+
+**Result:**
+
+| customer_id | customer_name |
+|-------------|---------------|
+| 105         | Kiran         |
 
 ### 6. Top 3 salaries per department
 
@@ -100,6 +142,21 @@ SELECT *
 FROM ranked_employees
 WHERE dr <= 3;
 ```
+
+**Result:**
+
+| emp_id | emp_name | dept_id | salary    | dr |
+|--------|----------|---------|-----------|----|
+| 8      | Hari     | NULL    | 55000.00  | 1  |
+| 1      | Asha     | 10      | 120000.00 | 1  |
+| 6      | Faisal   | 10      | 120000.00 | 1  |
+| 3      | Chitra   | 10      | 95000.00  | 2  |
+| 5      | Eva      | 20      | 110000.00 | 1  |
+| 2      | Bob      | 20      | 85000.00  | 2  |
+| 4      | David    | 30      | 70000.00  | 1  |
+| 7      | Gita     | 30      | 62000.00  | 2  |
+
+*Note: Asha and Faisal both get dr=1 because DENSE_RANK gives same rank for ties.*
 
 ### 7. Delete duplicate rows but keep the smallest id
 
@@ -118,6 +175,16 @@ WHERE id IN (
 );
 ```
 
+**Result:** 1 row deleted (user_id=3, the duplicate asha@example.com).
+
+**users table after:**
+
+| user_id | email              | gender |
+|---------|--------------------|--------|
+| 1       | asha@example.com   | F      |
+| 2       | bob@example.com    | M      |
+| 4       | chitra@example.com | F      |
+
 ### 8. Running total of sales by date
 
 ```sql
@@ -126,6 +193,17 @@ SELECT sale_date,
        SUM(amount) OVER (ORDER BY sale_date) AS running_total
 FROM sales;
 ```
+
+**Result** (using orders table as sales):
+
+| order_date | amount   | running_total |
+|------------|----------|---------------|
+| 2026-01-05 | 2500.00  | 2500.00       |
+| 2026-01-12 | 8500.00  | 11000.00      |
+| 2026-02-03 | 1200.00  | 12200.00      |
+| 2026-02-14 | 15000.00 | 27200.00      |
+| 2026-03-01 | 3200.00  | 30400.00      |
+| 2026-03-15 | 4500.00  | 34900.00      |
 
 ### 9. Swap gender values `M` and `F`
 
@@ -137,6 +215,15 @@ SET gender = CASE
                ELSE gender
              END;
 ```
+
+**users table after swap:**
+
+| user_id | email              | gender |
+|---------|--------------------|--------|
+| 1       | asha@example.com   | M      |
+| 2       | bob@example.com    | F      |
+| 3       | asha@example.com   | M      |
+| 4       | chitra@example.com | M      |
 
 ### 10. Find consecutive days of login
 Typical idea:

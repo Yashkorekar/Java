@@ -1,5 +1,17 @@
 # Advanced SQL and Interview Edge Cases — Interview Q&A
 
+> See **01-SQL-Fundamentals.md** for full sample tables and data.
+
+**Additional table for edge case examples — blacklist:**
+
+| customer_id |
+|-------------|
+| 101         |
+| NULL        |
+| 103         |
+
+---
+
 ## Common edge cases interviewers love
 - duplicates after joins
 - `NULL` behavior in comparisons
@@ -34,6 +46,7 @@ WHERE customer_id NOT IN (
 
 Problem:
 - if `blacklist.customer_id` contains `NULL`, results may become unexpected.
+- With our data above, this returns **no rows** because `NOT IN` with a NULL in the list makes every comparison `UNKNOWN`.
 
 Safer pattern:
 
@@ -46,6 +59,16 @@ WHERE NOT EXISTS (
   WHERE b.customer_id = c.customer_id
 );
 ```
+
+**Result:**
+
+| customer_id | customer_name | city    |
+|-------------|---------------|--------|
+| 102         | Sneha         | Pune    |
+| 104         | Priya         | Delhi   |
+| 105         | Kiran         | Chennai |
+
+*NOT EXISTS correctly returns non-blacklisted customers even though blacklist has a NULL row.*
 
 ## Ties in top salary problems
 Question: find second highest salary.
@@ -66,6 +89,14 @@ SELECT salary
 FROM salary_rank
 WHERE dr = 2;
 ```
+
+**Result:**
+
+| salary    |
+|-----------|
+| 110000.00 |
+
+*Asha and Faisal share rank 1 at 120000. DENSE_RANK gives Eva's 110000 rank 2 — no gap.*
 
 ## Highest salary vs employee with highest salary
 - Highest salary is one scalar value.

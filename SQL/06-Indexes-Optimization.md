@@ -1,5 +1,9 @@
 # Indexes, Query Plans, and Optimization — Interview Q&A
 
+> See **01-SQL-Fundamentals.md** for full sample tables and data.
+
+---
+
 ## What is an index?
 - An index is a data structure that helps the database find rows faster.
 - Tradeoff: faster reads, but extra storage and slower writes.
@@ -59,6 +63,13 @@ FROM employees
 WHERE YEAR(join_date) = 2025;
 ```
 
+**Result** (works but not SARGable — index on join_date cannot be used efficiently):
+
+| emp_id | emp_name | dept_id | manager_id | salary   | join_date  |
+|--------|----------|---------|------------|----------|------------|
+| 7      | Gita     | 30      | 4          | 62000.00 | 2025-02-14 |
+| 8      | Hari     | NULL    | NULL       | 55000.00 | 2025-09-30 |
+
 Better pattern:
 
 ```sql
@@ -67,6 +78,13 @@ FROM employees
 WHERE join_date >= DATE '2025-01-01'
   AND join_date < DATE '2026-01-01';
 ```
+
+**Result** (same result, but SARGable — index on join_date can be used):
+
+| emp_id | emp_name | dept_id | manager_id | salary   | join_date  |
+|--------|----------|---------|------------|----------|------------|
+| 7      | Gita     | 30      | 4          | 62000.00 | 2025-02-14 |
+| 8      | Hari     | NULL    | NULL       | 55000.00 | 2025-09-30 |
 
 ## `EXPLAIN` or execution plan
 - Shows how database intends to execute a query.
@@ -97,6 +115,15 @@ WHERE EXISTS (
   WHERE o.customer_id = c.customer_id
 );
 ```
+
+**Result:**
+
+| customer_id |
+|-------------|
+| 101         |
+| 102         |
+| 103         |
+| 104         |
 
 Reason:
 - `EXISTS` can stop at first match.

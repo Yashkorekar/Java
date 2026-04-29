@@ -1,5 +1,9 @@
 # Recursive CTEs, Advanced Patterns, and Case Studies — Interview Q&A
 
+> See **01-SQL-Fundamentals.md** for full sample tables and data.
+
+---
+
 ## Why this file matters
 This is where SQL interviews move from syntax recall to pattern recognition.
 
@@ -32,6 +36,19 @@ SELECT *
 FROM org_tree;
 ```
 
+**Result:**
+
+| emp_id | emp_name | manager_id | level_no |
+|--------|----------|------------|----------|
+| 1      | Asha     | NULL       | 1        |
+| 8      | Hari     | NULL       | 1        |
+| 2      | Bob      | 1          | 2        |
+| 3      | Chitra   | 1          | 2        |
+| 6      | Faisal   | 1          | 2        |
+| 4      | David    | 2          | 3        |
+| 5      | Eva      | 2          | 3        |
+| 7      | Gita     | 4          | 4        |
+
 Interview warning:
 - You may need cycle protection in real recursive data.
 
@@ -51,6 +68,15 @@ SELECT *
 FROM ranked_orders
 WHERE rn = 1;
 ```
+
+**Result:**
+
+| order_id | customer_id | order_date | amount   | rn |
+|----------|-------------|------------|----------|----|
+| 1005     | 101         | 2026-03-01 | 3200.00  | 1  |
+| 1002     | 102         | 2026-01-12 | 8500.00  | 1  |
+| 1004     | 103         | 2026-02-14 | 15000.00 | 1  |
+| 1006     | 104         | 2026-03-15 | 4500.00  | 1  |
 
 Key point:
 - Use deterministic tie-breakers.
